@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<!--
+  VAL Chiropractic — index.html
+  TODO before deploy:
+    1. Replace every [PLACEHOLDER] and 95148 with real data
+    2. Add real phone: search "PHONE_NUMBER" — ~12 spots
+    3. Add real email: update the JS obfuscation block at bottom
+    4. Add real hours: search "TODO: Confirm" in hours sections
+    5. Drop hero + doctor photos into /images/ and uncomment <img> tags
+    6. Replace Google/Yelp review URLs (search "TODO: Replace #")
+    7. Create sitemap.xml and robots.txt in repo root
+    8. Set OG image: <meta property="og:image" content="https://valchiropractic.com/images/og-image.jpg">
+    9. Confirm ZIP code (likely 95148) — search "95148"
+   10. Verify lien/insurance copy with Dr. Nguyen — search "TODO: Confirm lien"
+   SEO tags, JSON-LD schema, and full CSS are added in Stages 2 & 3.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════
+       SEO — title, meta, canonical, geo, OG, Twitter, JSON-LD
+       TODO: Set og:image path before first deploy (search "og-image")
+       TODO: Create sitemap.xml + robots.txt in repo root
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- 60-char title: keyword + location front-loaded -->
+  <title>San Jose Chiropractor | Auto Accident Care | VAL Chiropractic</title>
+
+  <!-- Primary meta ──────────────────────────────────────────── -->
+  <!-- ~155-char description targeting primary + secondary keywords -->
+  <meta name="description" content="VAL Chiropractic in San Jose, CA specializes in auto accident recovery, personal injury care, lower back pain, neck pain &amp; more. Dr. Lam Nguyen, D.C. Call for same-day appointments.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="VAL Chiropractic">
+
+  <!-- Canonical ─────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://valchiropractic.com/">
+
+  <!-- Geo meta ──────────────────────────────────────────────── -->
+  <!-- TODO: Verify coordinates for 3239 S White Rd, San Jose, CA (approx. Evergreen area) -->
+  <meta name="geo.region"    content="US-CA">
+  <meta name="geo.placename" content="San Jose, California">
+  <meta name="geo.position"  content="37.3091;-121.7943">
+  <meta name="ICBM"          content="37.3091, -121.7943">
+
+  <!-- Open Graph ────────────────────────────────────────────── -->
+  <meta property="og:type"        content="business.business">
+  <meta property="og:site_name"   content="VAL Chiropractic">
+  <meta property="og:title"       content="San Jose Chiropractor | Auto Accident Care | VAL Chiropractic">
+  <meta property="og:description" content="VAL Chiropractic in San Jose, CA specializes in auto accident recovery, personal injury care, lower back pain, neck pain &amp; more. Dr. Lam Nguyen, D.C.">
+  <meta property="og:url"         content="https://valchiropractic.com/">
+  <!-- TODO: Replace path with real OG image (1200×630px recommended) -->
+  <meta property="og:image"       content="https://valchiropractic.com/images/og-image.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"   content="VAL Chiropractic clinic in San Jose, CA — Dr. Lam Nguyen, D.C.">
+  <meta property="business:contact_data:street_address" content="3239 S White Road">
+  <meta property="business:contact_data:locality"       content="San Jose">
+  <meta property="business:contact_data:region"         content="CA">
+  <meta property="business:contact_data:postal_code"    content="95148">
+  <meta property="business:contact_data:country_name"   content="United States">
+  <meta property="business:contact_data:phone_number"   content="+14085321139">
+
+  <!-- Twitter / X Card ─────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="San Jose Chiropractor | Auto Accident Care | VAL Chiropractic">
+  <meta name="twitter:description" content="Personal injury &amp; auto accident chiropractic care in San Jose, CA. Dr. Lam Nguyen, D.C. Same-day appointments available.">
+  <!-- TODO: Replace with real OG image path -->
+  <meta name="twitter:image"       content="https://valchiropractic.com/images/og-image.jpg">
+  <meta name="twitter:image:alt"   content="VAL Chiropractic — San Jose, CA chiropractor">
+
+  <!-- JSON-LD Structured Data ───────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chiropractor",
+    "name": "VAL Chiropractic",
+    "url": "https://valchiropractic.com/",
+    "@id": "https://valchiropractic.com/#business",
+    "description": "Family chiropractic clinic in San Jose, CA specializing in personal injury, auto accident recovery, lower back pain, neck pain, Lower Cross Syndrome, shoulder, knee, and hip injuries.",
+    "image": "https://valchiropractic.com/images/og-image.jpg",
+    "logo": "https://valchiropractic.com/images/logo.png",
+    "telephone": "+14085321139",
+    "email": "lamnguyendc@gmail.com",
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Insurance, Lien",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3239 S White Road",
+      "addressLocality": "San Jose",
+      "addressRegion": "CA",
+      "postalCode": "95148",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.3091",
+      "longitude": "-121.7943"
+    },
+    "hasMap": "https://maps.google.com/?q=3239+S+White+Rd,+San+Jose,+CA+95148",
+    "areaServed": [
+      { "@type": "City", "name": "San Jose" },
+      { "@type": "City", "name": "Evergreen" },
+      { "@type": "City", "name": "East San Jose" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Wednesday", "Thursday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Friday"],
+        "opens": "09:00",
+        "closes": "15:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "136"
+    },
+    "medicalSpecialty": [
+      "Chiropractic",
+      "Physical Medicine"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Chiropractic Services at VAL Chiropractic",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Personal Injury & Auto Accident Recovery",
+            "description": "Chiropractic care for whiplash, spinal misalignment, and soft-tissue injuries from car accidents. Lien-based billing available.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Lower Back Pain Treatment",
+            "description": "Targeted spinal adjustments and soft-tissue therapy for lower back injury, disc herniation, and chronic lumbar pain.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Neck Pain Treatment",
+            "description": "Cervical spine adjustments for neck pain, whiplash, stiffness, and nerve compression.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Lower Cross Syndrome Treatment",
+            "description": "Chiropractic care and corrective exercises addressing the muscle imbalance pattern causing chronic lower back pain and poor posture.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Shoulder Injury Treatment",
+            "description": "Evaluation and treatment of rotator cuff strains, shoulder impingement, and frozen shoulder.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Knee Injury Treatment",
+            "description": "Conservative chiropractic care for knee pain, patellofemoral syndrome, and sports-related knee injuries.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Hip Injury Treatment",
+            "description": "Chiropractic and soft-tissue therapy for hip bursitis, sacroiliac joint dysfunction, and hip pain.",
+            "relevantSpecialty": "Chiropractic"
+          }
+        }
+      ]
+    },
+    "employee": {
+      "@type": "Physician",
+      "@id": "https://valchiropractic.com/#doctor",
+      "name": "Dr. Lam Nguyen",
+      "jobTitle": "Doctor of Chiropractic",
+      "medicalSpecialty": "Chiropractic",
+      "worksFor": { "@id": "https://valchiropractic.com/#business" }
+    },
+    "sameAs": [
+      "https://www.google.com/maps/search/VAL+Chiropractic+3239+S+White+Rd+San+Jose+CA+95148",
+      "https://www.yelp.com/biz/val-chiropractic-san-jose-2"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+/* ================================================================
+   VAL Chiropractic — Full Design System (Stage 2)
+   Palette · Typography · Layout · Components · Responsive
+================================================================ */
+
+/* ── Custom properties ──────────────────────────────────────── */
+:root {
+  /* Brand palette */
+  --g-900: #0e2017;
+  --g-800: #1a3628;
+  --g-700: #245238;
+  --g-600: #2d7a4f;
+  --g-500: #3a9562;
+  --g-400: #5cb57e;
+  --g-300: #8ed4a9;
+  --g-200: #c1e8d2;
+  --g-100: #e6f4ec;
+  --g-50:  #f2f9f5;
+
+  --cream-100: #faf8f5;
+  --cream-200: #f3f0ea;
+  --cream-300: #e8e2d6;
+
+  --text:       #1a1a1a;
+  --text-muted: #545454;
+  --text-light: #8a8a8a;
+  --white:      #ffffff;
+  --border:     #dde8e2;
+
+  /* Type */
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans:  'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Space scale (4px base) */
+  --s1: .25rem;  --s2: .5rem;   --s3: .75rem;  --s4: 1rem;
+  --s5: 1.25rem; --s6: 1.5rem;  --s8: 2rem;    --s10: 2.5rem;
+  --s12: 3rem;   --s16: 4rem;   --s20: 5rem;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,.05);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 6px 20px rgba(0,0,0,.09), 0 2px 6px rgba(0,0,0,.05);
+  --shadow-lg: 0 12px 36px rgba(0,0,0,.11), 0 4px 10px rgba(0,0,0,.05);
+
+  /* Shape */
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-pill: 100px;
+
+  /* Motion */
+  --ease: cubic-bezier(.25,.46,.45,.94);
+  --t-fast: 150ms; --t-med: 260ms; --t-slow: 420ms;
+
+  /* Layout */
+  --header-h: 70px;
+}
+
+/* ── Motion kill switch ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;          /* both html AND body — iOS Safari fix */
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--sans);
+  font-size: 16px; line-height: 1.72;
+  color: var(--text);
+  background: var(--cream-100);
+  overflow-x: hidden;
+}
+img  { max-width: 100%; height: auto; display: block; }
+a    { color: inherit; text-decoration: none; }
+address { font-style: normal; }
+
+/* ── Accessibility ──────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; top: -200%; left: 1rem;
+  background: var(--g-600); color: var(--white);
+  padding: .625rem 1.25rem;
+  border-radius: 0 0 var(--r-sm) var(--r-sm);
+  font-weight: 600; font-size: .9rem; z-index: 9999;
+  transition: top var(--t-fast) var(--ease);
+}
+.skip-link:focus { top: 0; }
+:focus-visible {
+  outline: 2.5px solid var(--g-500);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+.hidden { display: none !important; }
+
+/* ── Typography ─────────────────────────────────────────────── */
+h1,h2,h3,h4 {
+  font-family: var(--serif);
+  line-height: 1.2;
+  color: var(--g-800);
+  letter-spacing: -.02em;
+}
+h1 { font-size: clamp(2rem, 5.2vw, 3.4rem); font-weight: 700; }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 600; }
+h4 { font-size: 1rem; font-weight: 600; letter-spacing: .02em; }
+p  { margin-bottom: var(--s4); color: var(--text-muted); }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--text); }
+
+/* ── Global layout ──────────────────────────────────────────── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+section { padding: var(--s20) 0; }
+section[id], footer[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
+
+.section-label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .13em; text-transform: uppercase;
+  color: var(--g-600);
+  background: var(--g-100);
+  padding: .28rem .8rem;
+  border-radius: var(--r-pill);
+  margin-bottom: var(--s4);
+}
+.section-subhead {
+  font-size: 1.08rem; color: var(--text-muted);
+  max-width: 660px; margin: var(--s4) 0 var(--s10);
+  line-height: 1.78;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .45rem; padding: .72rem 1.6rem;
+  border-radius: var(--r-sm);
+  font-family: var(--sans); font-weight: 600; font-size: .875rem;
+  line-height: 1; cursor: pointer;
+  border: 2px solid transparent;
+  min-height: 44px; white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+.btn:hover  { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--g-600); color: var(--white); border-color: var(--g-600);
+}
+.btn-primary:hover {
+  background: var(--g-700); border-color: var(--g-700); color: var(--white);
+  box-shadow: 0 4px 16px rgba(45,122,79,.38);
+}
+.btn-outline {
+  background: transparent; color: var(--g-600); border-color: var(--g-600);
+}
+.btn-outline:hover { background: var(--g-600); color: var(--white); }
+.btn-secondary {
+  background: var(--white); color: var(--g-700); border-color: rgba(255,255,255,.55);
+}
+.btn-secondary:hover { background: var(--cream-100); color: var(--g-700); }
+.btn-sm  { padding: .48rem .9rem; font-size: .78rem; min-height: 38px; }
+.btn-lg  { padding: .88rem 2rem; font-size: .96rem; }
+.btn-full { width: 100%; }
+
+/* ── Photo placeholder ──────────────────────────────────────── */
+.photo-placeholder {
+  background: var(--g-50);
+  border: 2px dashed var(--g-300);
+  border-radius: var(--r-lg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: var(--s4); color: var(--g-400);
+  min-height: 380px; padding: var(--s8); text-align: center;
+}
+.photo-placeholder p  { color: var(--g-500); font-size: .85rem; }
+.photo-placeholder small { color: var(--g-400); }
+
+/* ── Scroll-reveal (driven by IntersectionObserver in JS) ───── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--t-slow) var(--ease), transform var(--t-slow) var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ================================================================
+   HEADER
+================================================================ */
+#site-header {
+  position: sticky; top: 0; z-index: 400;
+  background: rgba(250,248,245,.93);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--t-med) var(--ease);
+}
+#site-header.is-scrolled { box-shadow: var(--shadow-md); }
+
+.header-inner {
+  display: flex; align-items: center;
+  gap: var(--s6); height: var(--header-h);
+}
+
+/* Logo */
+.site-logo {
+  display: flex; align-items: center; gap: .55rem;
+  text-decoration: none; flex-shrink: 0;
+}
+.logo-mark {
+  font-family: var(--serif); font-size: 1.65rem; font-weight: 700;
+  color: var(--g-600); letter-spacing: -.03em; line-height: 1;
+}
+.logo-text {
+  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  color: var(--g-800); letter-spacing: .05em; text-transform: uppercase;
+  border-left: 1.5px solid var(--border); padding-left: .6rem; line-height: 1;
+}
+
+/* Desktop nav */
+#primary-nav { margin-left: auto; }
+#primary-nav ul { display: flex; align-items: center; gap: 2px; list-style: none; }
+#primary-nav a {
+  font-size: .84rem; font-weight: 500; color: var(--g-800);
+  padding: .42rem .72rem; border-radius: var(--r-sm);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+#primary-nav a:hover { background: var(--g-100); color: var(--g-600); }
+
+/* Header CTAs */
+.header-ctas { display: flex; align-items: center; gap: var(--s3); flex-shrink: 0; }
+.header-call { display: none; }   /* revealed at ≥1024px */
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px;
+  background: none; border: none; cursor: pointer;
+  padding: .6rem; border-radius: var(--r-sm); flex-shrink: 0;
+}
+.hamburger-line {
+  display: block; height: 2px; width: 22px;
+  background: var(--g-800); border-radius: 2px;
+  transition: transform var(--t-med) var(--ease), opacity var(--t-med) var(--ease);
+  transform-origin: center;
+}
+.nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0; transform: scaleX(0);
+}
+.nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile nav drawer ──────────────────────────────────────────
+   iOS Safari: position absolute + explicit px + visibility hidden
+   so closed drawer can never cause horizontal scroll
+──────────────────────────────────────────────────────────────── */
+#mobile-nav {
+  position: absolute;
+  top: var(--header-h); left: 0; right: 0;
+  width: 100%;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: var(--s6) var(--s6) var(--s8);
+  /* CLOSED */
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;      /* hides from AT + blocks pointer when closed */
+  pointer-events: none;
+  transition:
+    transform var(--t-med) var(--ease),
+    opacity   var(--t-med) var(--ease),
+    visibility var(--t-med) var(--ease);
+  z-index: 390;
+}
+#mobile-nav.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+#mobile-nav ul { list-style: none; margin-bottom: var(--s6); }
+#mobile-nav li { border-bottom: 1px solid var(--border); }
+#mobile-nav li a {
+  display: block; padding: .88rem 0;
+  font-size: 1rem; font-weight: 500; color: var(--g-800);
+  transition: color var(--t-fast);
+}
+#mobile-nav li a:hover { color: var(--g-600); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: var(--s3); }
+body.nav-open { overflow: hidden; }
+
+/* ================================================================
+   HERO
+================================================================ */
+#hero {
+  background: linear-gradient(140deg, var(--g-900) 0%, var(--g-800) 50%, var(--g-700) 100%);
+  position: relative; overflow: hidden;
+  padding: var(--s20) 0;
+  min-height: calc(88vh - var(--header-h));
+  display: flex; align-items: center;
+}
+/* Decorative orbs */
+#hero::before, #hero::after {
+  content: ''; position: absolute; border-radius: 50%;
+  background: var(--white); opacity: .055; pointer-events: none;
+}
+#hero::before { width: 620px; height: 620px; top: -220px; right: -160px; }
+#hero::after  { width: 380px; height: 380px; bottom: -130px; left: -90px; }
+
+.hero-bg-image {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: 0; filter: brightness(.42) saturate(.9);
+}
+.hero-content { position: relative; z-index: 1; max-width: 780px; }
+
+#hero-heading {
+  color: var(--white); font-size: clamp(2rem, 5.4vw, 3.5rem);
+  line-height: 1.14; margin-bottom: var(--s5);
+  text-shadow: 0 2px 14px rgba(0,0,0,.22);
+}
+.hero-subhead {
+  color: rgba(255,255,255,.87); font-size: clamp(.98rem, 1.8vw, 1.18rem);
+  max-width: 580px; margin-bottom: var(--s8); line-height: 1.74;
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: var(--s4); margin-bottom: var(--s10); }
+
+.trust-strip {
+  display: flex; flex-wrap: wrap; gap: var(--s6); list-style: none;
+  padding-top: var(--s8); border-top: 1px solid rgba(255,255,255,.18);
+}
+.trust-item { display: flex; flex-direction: column; gap: .2rem; }
+.trust-item strong {
+  font-family: var(--serif); font-size: 1.22rem; font-weight: 700;
+  color: var(--white); line-height: 1;
+}
+.trust-item span {
+  font-size: .7rem; font-weight: 500; color: rgba(255,255,255,.68);
+  text-transform: uppercase; letter-spacing: .07em;
+}
+
+/* ================================================================
+   PERSONAL INJURY
+================================================================ */
+#personal-injury { background: var(--cream-100); }
+
+.pi-cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s6); margin-bottom: var(--s10);
+}
+.pi-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--s8) var(--s6);
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.pi-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.pi-icon {
+  width: 54px; height: 54px;
+  background: var(--g-100); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--g-600); margin-bottom: var(--s5);
+  flex-shrink: 0;
+}
+.pi-card h3 { margin-bottom: var(--s3); }
+.pi-card p  { font-size: .9rem; margin: 0; }
+
+.pi-steps-box {
+  background: linear-gradient(138deg, var(--g-900) 0%, var(--g-800) 100%);
+  border-radius: var(--r-lg);
+  padding: var(--s10) var(--s10);
+}
+.pi-steps-box h3 { color: var(--white); margin-bottom: var(--s6); }
+.pi-steps { list-style: none; counter-reset: pi; display: flex; flex-direction: column; gap: var(--s4); margin-bottom: var(--s8); }
+.pi-steps li {
+  counter-increment: pi;
+  display: flex; gap: var(--s4); align-items: flex-start;
+  font-size: .93rem; color: rgba(255,255,255,.87); line-height: 1.65;
+}
+.pi-steps li::before {
+  content: counter(pi); flex-shrink: 0;
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.35);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: .75rem; font-weight: 700; margin-top: .14rem;
+}
+.pi-steps li strong { color: var(--white); }
+.pi-steps li a { color: var(--g-300); text-decoration: underline; }
+
+/* ================================================================
+   CONDITIONS ACCORDION
+================================================================ */
+#conditions { background: var(--white); }
+
+.accordion { display: flex; flex-direction: column; gap: var(--s3); }
+
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md); overflow: hidden;
+  background: var(--white);
+  transition: box-shadow var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+}
+.accordion-item[open] {
+  border-color: var(--g-300);
+  box-shadow: 0 0 0 3px var(--g-100);
+}
+.accordion-item:not([open]):hover { box-shadow: var(--shadow-sm); }
+
+.accordion-header {
+  display: flex; align-items: center; gap: var(--s4);
+  padding: var(--s5) var(--s6); cursor: pointer;
+  list-style: none; user-select: none;
+  min-height: 64px; -webkit-tap-highlight-color: transparent;
+}
+.accordion-header::-webkit-details-marker,
+.accordion-header::marker { display: none; }
+
+.accordion-icon {
+  flex-shrink: 0; width: 40px; height: 40px;
+  background: var(--g-100); border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--g-600);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.accordion-item[open] .accordion-icon { background: var(--g-600); color: var(--white); }
+
+.accordion-title {
+  font-family: var(--serif); font-size: 1.04rem; font-weight: 600;
+  color: var(--g-800); flex: 1; line-height: 1.3;
+}
+.accordion-chevron {
+  flex-shrink: 0; color: var(--text-light);
+  transition: transform var(--t-med) var(--ease);
+}
+.accordion-item[open] .accordion-chevron { transform: rotate(180deg); }
+
+.accordion-body {
+  padding: 0 var(--s6) var(--s7);
+  /* indent body to align with title text */
+  padding-left: calc(var(--s6) + 40px + var(--s4));
+}
+.accordion-body h3 { color: var(--g-700); margin-bottom: var(--s3); font-size: 1.02rem; }
+.accordion-body p  { font-size: .93rem; line-height: 1.76; margin-bottom: var(--s3); }
+.accordion-body p:last-child { margin-bottom: 0; }
+
+/* ================================================================
+   ABOUT DR. NGUYEN
+================================================================ */
+#about { background: var(--cream-100); }
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1.6fr;
+  gap: var(--s16); align-items: start;
+}
+.about-photo img { border-radius: var(--r-lg); box-shadow: var(--shadow-lg); width: 100%; }
+
+.about-subtitle {
+  font-size: .88rem; font-weight: 500; color: var(--g-600);
+  margin-bottom: var(--s6); letter-spacing: .02em;
+}
+.about-content h2 { margin-bottom: var(--s2); }
+.about-content p   { font-size: .94rem; }
+
+.credentials-list {
+  list-style: none; display: flex; flex-direction: column; gap: var(--s3);
+  margin-top: var(--s6); padding-top: var(--s6);
+  border-top: 1px solid var(--border);
+}
+.credentials-list li {
+  display: flex; align-items: flex-start; gap: var(--s3);
+  font-size: .9rem; color: var(--text-muted); line-height: 1.55;
+}
+.credentials-list svg { flex-shrink: 0; margin-top: .14rem; }
+
+/* ================================================================
+   HOW IT WORKS
+================================================================ */
+#how-it-works { background: var(--g-800); }
+#how-it-works .section-label { background: rgba(255,255,255,.1); color: var(--g-200); }
+#how-it-works h2 { color: var(--white); }
+#how-it-works .section-subhead { color: rgba(255,255,255,.72); }
+
+.steps-list {
+  list-style: none;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--s5); counter-reset: steps;
+}
+.step-item {
+  background: rgba(255,255,255,.065); border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r-md); padding: var(--s8) var(--s6);
+  transition: background var(--t-med);
+}
+.step-item:hover { background: rgba(255,255,255,.1); }
+.step-number {
+  font-family: var(--serif); font-size: 3rem; font-weight: 700; line-height: 1;
+  color: rgba(255,255,255,.13); margin-bottom: var(--s5); letter-spacing: -.04em;
+}
+.step-content h3 { color: var(--white); font-size: 1.08rem; margin-bottom: var(--s3); }
+.step-content p  { color: rgba(255,255,255,.72); font-size: .88rem; line-height: 1.72; margin: 0; }
+
+/* ================================================================
+   WHY CHOOSE
+================================================================ */
+#why-choose { background: var(--white); }
+
+.benefits-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--s6);
+}
+.benefit-card {
+  padding: var(--s8) var(--s6);
+  border: 1px solid var(--border); border-radius: var(--r-md);
+  background: var(--cream-100);
+  transition: box-shadow var(--t-med), transform var(--t-med);
+}
+.benefit-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.benefit-icon {
+  width: 52px; height: 52px;
+  background: var(--g-100); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--g-600); margin-bottom: var(--s5);
+}
+.benefit-card h3 { font-size: 1.08rem; margin-bottom: var(--s3); }
+.benefit-card p  { font-size: .88rem; margin: 0; }
+
+/* ================================================================
+   REVIEWS
+================================================================ */
+#reviews { background: var(--cream-100); }
+
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--s6); margin-bottom: var(--s10);
+}
+.review-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r-md); padding: var(--s8) var(--s6);
+  box-shadow: var(--shadow-xs);
+  display: flex; flex-direction: column; gap: var(--s4);
+  transition: box-shadow var(--t-med);
+}
+.review-card:hover { box-shadow: var(--shadow-md); }
+.review-stars { font-size: 1.05rem; color: #f59e0b; letter-spacing: .04em; }
+.review-card blockquote p {
+  font-style: italic; font-size: .93rem;
+  color: var(--text-muted); line-height: 1.72; margin: 0;
+}
+.review-author {
+  display: flex; flex-direction: column; gap: .22rem;
+  border-top: 1px solid var(--border); padding-top: var(--s4); margin-top: auto;
+}
+.review-author strong { font-size: .88rem; color: var(--text); }
+.review-author span   { font-size: .78rem; color: var(--text-light); }
+
+.review-ctas { text-align: center; }
+.review-ctas > p { margin-bottom: var(--s5); font-size: 1rem; }
+.review-links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s4); }
+.review-btn { gap: .5rem; }
+
+/* ================================================================
+   LOCATION & HOURS
+================================================================ */
+#location { background: var(--white); }
+
+.location-grid {
+  display: grid; grid-template-columns: 1.25fr 1fr;
+  gap: var(--s10); align-items: start;
+}
+.map-wrapper {
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--shadow-md); border: 1px solid var(--border);
+}
+.map-wrapper iframe { display: block; }
+
+.location-info { display: flex; flex-direction: column; gap: var(--s8); }
+.info-block { display: flex; flex-direction: column; gap: var(--s4); }
+.info-block h3 {
+  display: flex; align-items: center; gap: var(--s2);
+  font-family: var(--sans); font-size: .95rem; font-weight: 600;
+  color: var(--g-800); letter-spacing: 0; line-height: 1;
+}
+.info-block address, .info-block p {
+  font-size: .92rem; color: var(--text-muted); margin: 0; line-height: 1.68;
+}
+.hours-list {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden;
+}
+.hours-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .48rem var(--s4);
+  border-bottom: 1px solid var(--border); font-size: .88rem;
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-row:nth-child(even) { background: var(--cream-200); }
+.hours-row dt { font-weight: 500; color: var(--text); }
+.hours-row dd { color: var(--text-muted); }
+
+.phone-link {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 700;
+  color: var(--g-600); letter-spacing: -.01em;
+}
+.phone-link:hover { color: var(--g-700); }
+.parking-note {
+  display: flex; align-items: center; gap: var(--s2);
+  font-size: .82rem; color: var(--text-light); margin-top: var(--s1) !important;
+}
+
+/* ================================================================
+   CONTACT
+================================================================ */
+#contact { background: var(--cream-100); }
+
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.65fr;
+  gap: var(--s10); align-items: start;
+}
+.contact-info h3 {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+  margin-bottom: var(--s5); color: var(--g-800);
+}
+.contact-list {
+  list-style: none; display: flex; flex-direction: column; gap: var(--s5);
+  margin-bottom: var(--s8);
+}
+.contact-list li {
+  display: flex; align-items: flex-start; gap: var(--s3);
+  font-size: .93rem; color: var(--text-muted);
+}
+.contact-list svg { flex-shrink: 0; margin-top: .2rem; color: var(--g-600); }
+.contact-list a { color: var(--g-600); font-weight: 500; }
+.contact-list a:hover { color: var(--g-700); }
+.contact-list address { color: var(--text-muted); }
+
+.accident-cta-box {
+  background: linear-gradient(138deg, var(--g-900), var(--g-800));
+  border-radius: var(--r-md); padding: var(--s6);
+}
+.accident-cta-box strong {
+  display: block; color: var(--white); font-size: .96rem; margin-bottom: var(--s2);
+}
+.accident-cta-box p { font-size: .85rem; color: rgba(255,255,255,.78); margin-bottom: var(--s5); }
+
+/* Form */
+#contact-form {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: var(--s10);
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: var(--s5);
+}
+.form-group { display: flex; flex-direction: column; gap: var(--s2); }
+.form-row   { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5); }
+
+label {
+  font-size: .82rem; font-weight: 600;
+  color: var(--g-800); letter-spacing: .01em;
+}
+label span[aria-hidden] { color: var(--g-600); margin-left: .2em; }
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%; padding: .72rem 1rem;
+  border: 1.5px solid var(--border); border-radius: var(--r-sm);
+  font-family: var(--sans); font-size: .93rem; color: var(--text);
+  background: var(--cream-100);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+  min-height: 44px; appearance: none; -webkit-appearance: none;
+}
+input::placeholder, textarea::placeholder { color: var(--text-light); }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--g-500);
+  box-shadow: 0 0 0 3px var(--g-100);
+  background: var(--white);
+}
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23545454' stroke-width='2'%3E%3Cpolyline points='1 1 6 7 11 1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center;
+  padding-right: 2.5rem; cursor: pointer;
+}
+textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
+.form-note {
+  font-size: .76rem; color: var(--text-light);
+  text-align: center; margin: 0; line-height: 1.55;
+}
+
+/* ================================================================
+   FOOTER
+================================================================ */
+#site-footer { background: var(--g-800); color: rgba(255,255,255,.72); }
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: var(--s10); padding: var(--s16) 0 var(--s12);
+}
+.footer-brand .logo-mark { color: var(--g-300); }
+.footer-brand .logo-text { color: rgba(255,255,255,.78); border-color: rgba(255,255,255,.18); }
+.footer-brand .site-logo  { margin-bottom: var(--s4); }
+.footer-brand > p { font-size: .86rem; max-width: 240px; line-height: 1.68; margin-bottom: var(--s5); }
+
+.footer-social { display: flex; gap: var(--s3); flex-wrap: wrap; }
+.footer-social a {
+  display: flex; align-items: center; gap: .42rem;
+  font-size: .78rem; font-weight: 500; color: rgba(255,255,255,.58);
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+  padding: .42rem .8rem; border-radius: var(--r-sm);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.footer-social a:hover { background: rgba(255,255,255,.14); color: var(--white); }
+
+.footer-col h4 {
+  font-family: var(--sans); font-size: .68rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.38); margin-bottom: var(--s4);
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: var(--s3); }
+.footer-col ul a {
+  font-size: .86rem; color: rgba(255,255,255,.62);
+  transition: color var(--t-fast);
+}
+.footer-col ul a:hover { color: var(--white); }
+.footer-col address,
+.footer-col p {
+  font-size: .86rem; color: rgba(255,255,255,.62);
+  margin-bottom: var(--s3); line-height: 1.68;
+}
+.footer-col p a { color: rgba(255,255,255,.62); }
+.footer-col p a:hover { color: var(--white); }
+#footer-email-link a { color: rgba(255,255,255,.62); }
+#footer-email-link a:hover { color: var(--white); }
+.footer-hours { font-size: .86rem; line-height: 1.72; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.09); padding: var(--s5) 0;
+}
+.footer-bottom p {
+  font-size: .76rem; color: rgba(255,255,255,.36);
+  margin: 0; text-align: center;
+}
+
+/* ================================================================
+   STICKY MOBILE CALL BAR
+================================================================ */
+.mobile-call-bar { display: none; }
+
+@media (max-width: 767px) {
+  .mobile-call-bar {
+    display: flex; position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: 500; background: var(--g-900);
+    border-top: 1px solid rgba(255,255,255,.09);
+    box-shadow: 0 -4px 18px rgba(0,0,0,.22);
+  }
+  .mobile-call-btn,
+  .mobile-book-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    gap: .45rem; min-height: 56px;
+    font-family: var(--sans); font-weight: 600; font-size: .88rem;
+    text-decoration: none;
+  }
+  .mobile-call-btn { background: var(--g-600); color: var(--white); }
+  .mobile-book-btn {
+    background: var(--g-800); color: rgba(255,255,255,.82);
+    border-left: 1px solid rgba(255,255,255,.08);
+  }
+  body { padding-bottom: 56px; }
+}
+
+/* ================================================================
+   RESPONSIVE BREAKPOINTS
+================================================================ */
+
+/* Show phone CTA in header on wide screens */
+@media (min-width: 1024px) { .header-call { display: flex; } }
+
+/* Collapse desktop nav → hamburger */
+@media (max-width: 1023px) {
+  #primary-nav            { display: none; }
+  .nav-toggle             { display: flex; }
+  .header-ctas .btn-primary { display: none; }
+}
+
+/* Stack about / location / contact at medium */
+@media (max-width: 900px) {
+  .about-grid    { grid-template-columns: 1fr; gap: var(--s10); }
+  .about-photo   { max-width: 460px; }
+  .location-grid { grid-template-columns: 1fr; }
+  .contact-grid  { grid-template-columns: 1fr; }
+  .footer-grid   { grid-template-columns: 1fr 1fr; gap: var(--s8); }
+  .footer-brand  { grid-column: 1 / -1; }
+  .accordion-body { padding-left: var(--s6); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  section { padding: 3.5rem 0; }
+  .container { padding: 0 1.1rem; }
+
+  #hero { min-height: auto; padding: 3.5rem 0 3rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { justify-content: center; }
+
+  .pi-cards    { grid-template-columns: 1fr; }
+  .pi-steps-box { padding: var(--s6) var(--s5); }
+
+  .steps-list  { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .reviews-grid  { grid-template-columns: 1fr; }
+
+  .accordion-header { padding: var(--s4); gap: var(--s3); }
+  .accordion-body   { padding: 0 var(--s4) var(--s5); }
+
+  .form-row { grid-template-columns: 1fr; }
+  #contact-form { padding: var(--s6) var(--s5); }
+
+  .footer-grid { grid-template-columns: 1fr; gap: var(--s8); }
+  .footer-brand { grid-column: auto; }
+
+  .review-links { flex-direction: column; align-items: center; }
+}
+
+/* Smallest iPhones */
+@media (max-width: 375px) {
+  .logo-text { display: none; }
+  .trust-strip { flex-direction: column; gap: var(--s4); }
+  #hero-heading { font-size: 1.75rem; }
+}
+
+/* ================================================================
+   CHAT WIDGET
+   Floating button + slide-up panel, bottom-right.
+   Wired as a "Contact us" shortcut by default.
+   See JS block for how to upgrade to Claude Haiku API via
+   a Netlify function.
+================================================================ */
+#chat-widget {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  z-index: 600;
+  display: flex; flex-direction: column; align-items: flex-end;
+  gap: var(--s3);
+}
+
+/* Push above the mobile call bar on small screens */
+@media (max-width: 767px) {
+  #chat-widget { bottom: calc(56px + 1rem); right: 1rem; }
+}
+
+/* Floating trigger button */
+#chat-trigger {
+  width: 56px; height: 56px;
+  background: var(--g-600);
+  border: none; border-radius: 50%;
+  cursor: pointer; color: var(--white);
+  box-shadow: 0 4px 18px rgba(45,122,79,.45);
+  display: flex; align-items: center; justify-content: center;
+  transition:
+    background var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease);
+  flex-shrink: 0;
+}
+#chat-trigger:hover {
+  background: var(--g-700);
+  transform: scale(1.06);
+  box-shadow: 0 6px 24px rgba(45,122,79,.52);
+}
+#chat-trigger:focus-visible { outline: 2.5px solid var(--g-400); outline-offset: 3px; }
+#chat-trigger svg { transition: transform var(--t-med) var(--ease); }
+#chat-widget.is-open #chat-trigger svg.icon-chat   { display: none; }
+#chat-widget.is-open #chat-trigger svg.icon-close  { display: block; }
+#chat-widget:not(.is-open) #chat-trigger svg.icon-close { display: none; }
+
+/* Chat panel */
+#chat-panel {
+  width: 320px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  /* Closed */
+  transform: translateY(12px) scale(.97);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform-origin: bottom right;
+  transition:
+    transform var(--t-med) var(--ease),
+    opacity   var(--t-med) var(--ease),
+    visibility var(--t-med) var(--ease);
+}
+#chat-widget.is-open #chat-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1; visibility: visible; pointer-events: auto;
+}
+
+@media (max-width: 400px) {
+  #chat-panel { width: calc(100vw - 2rem); }
+}
+
+.chat-header {
+  background: var(--g-700);
+  padding: var(--s4) var(--s5);
+  display: flex; align-items: center; gap: var(--s3);
+}
+.chat-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--g-500);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--white);
+}
+.chat-header-info { flex: 1; }
+.chat-header-name {
+  font-weight: 600; font-size: .88rem; color: var(--white); line-height: 1.2;
+}
+.chat-header-status {
+  font-size: .72rem; color: rgba(255,255,255,.72); display: flex; align-items: center; gap: .3rem;
+}
+.chat-status-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--g-300);
+}
+
+.chat-messages {
+  height: 240px; overflow-y: auto; padding: var(--s4);
+  display: flex; flex-direction: column; gap: var(--s3);
+  scroll-behavior: smooth;
+  background: var(--cream-100);
+}
+.chat-bubble {
+  max-width: 85%; padding: var(--s3) var(--s4);
+  border-radius: var(--r-md); font-size: .86rem; line-height: 1.55;
+}
+.chat-bubble.bot {
+  background: var(--white); color: var(--text);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: var(--r-sm);
+  align-self: flex-start;
+}
+.chat-bubble.user {
+  background: var(--g-600); color: var(--white);
+  border-bottom-right-radius: var(--r-sm);
+  align-self: flex-end;
+}
+.chat-bubble.bot p { color: var(--text); margin: 0; font-size: inherit; line-height: inherit; }
+.chat-bubble.bot a { color: var(--g-600); text-decoration: underline; font-weight: 500; }
+.chat-typing {
+  display: none; align-items: center; gap: 4px; padding: var(--s3) var(--s4);
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r-md); border-bottom-left-radius: var(--r-sm);
+  align-self: flex-start;
+}
+.chat-typing.is-visible { display: flex; }
+.chat-typing span {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--text-light);
+  animation: typing-bounce .9s ease-in-out infinite;
+}
+.chat-typing span:nth-child(2) { animation-delay: .15s; }
+.chat-typing span:nth-child(3) { animation-delay: .30s; }
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%           { transform: translateY(-5px); }
+}
+
+.chat-input-row {
+  display: flex; gap: var(--s2); padding: var(--s3) var(--s4);
+  border-top: 1px solid var(--border); background: var(--white);
+}
+#chat-input {
+  flex: 1; border: 1.5px solid var(--border); border-radius: var(--r-pill);
+  padding: .46rem var(--s4); font-size: .85rem; font-family: var(--sans);
+  background: var(--cream-100); min-height: 36px; resize: none;
+  transition: border-color var(--t-fast);
+}
+#chat-input:focus { outline: none; border-color: var(--g-500); background: var(--white); }
+#chat-send {
+  width: 34px; height: 34px; flex-shrink: 0;
+  background: var(--g-600); border: none; border-radius: 50%;
+  color: var(--white); cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+  transition: background var(--t-fast), transform var(--t-fast);
+  align-self: flex-end;
+}
+#chat-send:hover { background: var(--g-700); transform: scale(1.07); }
+
+.chat-powered {
+  text-align: center; padding: var(--s2) var(--s4) var(--s3);
+  font-size: .68rem; color: var(--text-light);
+  border-top: 1px solid var(--border);
+}
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     SKIP TO CONTENT
+============================================================ -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header id="site-header" role="banner">
+  <div class="container header-inner">
+
+    <a href="#" class="site-logo" aria-label="VAL Chiropractic — return to top">
+      <!-- STAGE 3: Replace with inline SVG logo or styled wordmark -->
+      <span class="logo-mark">VAL</span>
+      <span class="logo-text">Chiropractic</span>
+    </a>
+
+    <nav id="primary-nav" aria-label="Primary navigation">
+      <ul role="list">
+        <li><a href="#personal-injury">Personal Injury</a></li>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-ctas">
+      <a href="tel:+14085321139" class="btn btn-outline header-call">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
+        <span>(408) 532-1139</span>
+      </a>
+      <a href="#contact" class="btn btn-primary">Book Appointment</a>
+    </div>
+
+    <button
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Open navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile drawer -->
+  <nav
+    id="mobile-nav"
+    aria-label="Mobile navigation"
+    aria-hidden="true">
+    <ul role="list">
+      <li><a href="#personal-injury">Personal Injury</a></li>
+      <li><a href="#conditions">Conditions</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-ctas">
+      <a href="tel:+14085321139" class="btn btn-primary">Call (408) 532-1139</a>
+      <a href="#contact" class="btn btn-outline">Book Appointment</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     MAIN
+============================================================ -->
+<main id="main-content">
+
+  <!-- ==========================================================
+       HERO
+  ========================================================== -->
+  <section id="hero" aria-labelledby="hero-heading">
+
+    <!-- TODO: Replace with actual clinic or treatment photo.
+         Recommended: 1440 × 900 px, warm/professional, showing clinic interior
+         or Dr. Nguyen with a patient.
+    <img
+      src="images/hero-val-chiropractic-san-jose.jpg"
+      alt="VAL Chiropractic clinic interior in San Jose, CA — comfortable reception area and treatment rooms"
+      class="hero-bg-image"
+      loading="eager"
+      width="1440" height="900"> -->
+
+    <div class="container hero-content">
+      <div class="hero-text">
+
+        <!-- ONE H1 PER PAGE — contains primary keyword + location -->
+        <h1 id="hero-heading">
+          San Jose's Trusted Chiropractor for Pain Relief &amp;&nbsp;Auto Accident Recovery
+        </h1>
+
+        <p class="hero-subhead">
+          Dr. Lam Nguyen, D.C. provides compassionate, evidence-based chiropractic care for personal injury, lower back pain, neck pain, and more — right here in San Jose, CA.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="tel:+14085321139" class="btn btn-primary btn-lg">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
+            Call Now
+          </a>
+          <a href="#contact" class="btn btn-secondary btn-lg">Book Appointment</a>
+        </div>
+
+        <!-- Trust strip -->
+        <ul class="trust-strip" aria-label="Practice highlights">
+          <li class="trust-item">
+            <strong>20+</strong>
+            <span>Years in Practice</span>
+          </li>
+          <li class="trust-item">
+            <strong><span aria-hidden="true">★★★★★</span><span class="sr-only">4.5 stars</span> 4.5</strong>
+            <span>Yelp Rating · 136 Reviews</span>
+          </li>
+          <li class="trust-item">
+            <strong>Lien-Based</strong>
+            <span>Auto Accident Care</span>
+          </li>
+          <li class="trust-item">
+            <strong>Family</strong>
+            <span>Chiropractic Clinic</span>
+          </li>
+        </ul>
+
+      </div><!-- /hero-text -->
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       PERSONAL INJURY & AUTO ACCIDENT
+  ========================================================== -->
+  <section id="personal-injury" aria-labelledby="pi-heading">
+    <div class="container">
+
+      <div class="section-label">Personal Injury &amp; Auto Accident Care</div>
+      <h2 id="pi-heading">Injured in a Car Accident? We Can Help.</h2>
+      <p class="section-subhead">
+        Whiplash, back pain, and soft-tissue injuries often don't surface until hours or days after a collision. Early chiropractic care both speeds your recovery and protects your legal claim. VAL Chiropractic specializes in accident-related injuries and coordinates with your attorney so you can focus on healing.
+      </p>
+
+      <div class="pi-cards">
+
+        <article class="pi-card">
+          <div class="pi-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l2-5h14l2 5"/><rect x="1" y="9" width="22" height="8" rx="2"/>
+              <circle cx="6.5" cy="17" r="2"/><circle cx="17.5" cy="17" r="2"/>
+              <path d="M1 13h2m18 0h2"/>
+            </svg>
+          </div>
+          <h3>We Work on Lien</h3>
+          <p>No upfront costs for personal injury patients. We bill on lien — meaning your care is paid from your settlement.
+            <!-- TODO: Confirm lien policy and accepted insurance types with Dr. Nguyen -->
+          </p>
+        </article>
+
+        <article class="pi-card">
+          <div class="pi-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3>Detailed Injury Reports</h3>
+          <p>We produce thorough medical documentation — diagnosis, treatment, and progress records — that your attorney needs to build a strong personal injury claim.</p>
+        </article>
+
+        <article class="pi-card">
+          <div class="pi-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Auto Insurance Accepted</h3>
+          <p>Your MedPay or PIP coverage may pay for chiropractic care with zero out-of-pocket cost. We verify your benefits and coordinate directly with your insurer.
+            <!-- TODO: Confirm specific insurance plans accepted -->
+          </p>
+        </article>
+
+        <article class="pi-card">
+          <div class="pi-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Same-Day Appointments</h3>
+          <p>Documenting injuries quickly strengthens your case. We offer same-day and next-day appointments for accident victims — call within 72 hours of your accident.</p>
+        </article>
+
+      </div><!-- /pi-cards -->
+
+      <div class="pi-steps-box">
+        <h3>What to Do After a Car Accident</h3>
+        <ol class="pi-steps">
+          <li><strong>Get checked medically</strong> — even if you feel fine, internal and soft-tissue injuries may not be apparent right away.</li>
+          <li><strong>Document everything</strong> — photos of the scene, vehicles, and any visible injuries.</li>
+          <li><strong>Report to your insurance</strong> — notify your insurer promptly.</li>
+          <li><strong>Call VAL Chiropractic</strong> — we'll evaluate your injuries, start your recovery plan, and generate the records your attorney needs.</li>
+        </ol>
+        <a href="tel:+14085321139" class="btn btn-primary">Call for Accident Care: (408) 532-1139</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       CONDITIONS WE TREAT — ACCORDION
+  ========================================================== -->
+  <section id="conditions" aria-labelledby="conditions-heading">
+    <div class="container">
+
+      <div class="section-label">What We Treat</div>
+      <h2 id="conditions-heading">Conditions We Treat</h2>
+      <p class="section-subhead">
+        From accident injuries to everyday aches, Dr. Nguyen builds treatment plans around the root cause of your pain — not just the symptoms.
+      </p>
+
+      <!-- Using native <details>/<summary> — no JS required for open/close.
+           JS at bottom adds "one-open-at-a-time" enhancement. -->
+      <div class="accordion" role="list">
+
+        <!-- 1 ─ Personal Injury & Auto Accident Recovery -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l2-5h14l2 5"/><rect x="1" y="9" width="22" height="8" rx="2"/><circle cx="6.5" cy="17" r="2"/><circle cx="17.5" cy="17" r="2"/></svg>
+            </span>
+            <span class="accordion-title">Personal Injury &amp; Auto Accident Recovery</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Personal Injury &amp; Auto Accident Chiropractic Care</h3>
+            <p>Car accidents cause whiplash, spinal misalignment, and soft-tissue damage that can surface hours or days after the collision. Left untreated, these injuries frequently become chronic, painful conditions that affect your daily life for months or years.</p>
+            <p>Chiropractic adjustments restore proper spinal alignment, reduce inflammation, and accelerate natural healing — often avoiding the need for surgery or long-term medication. Dr. Nguyen builds individualized recovery plans and provides the thorough documentation your attorney needs for your personal injury claim, all with no upfront cost on lien.</p>
+          </div>
+        </details>
+
+        <!-- 2 ─ Low Back Injury / Lower Back Pain -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2c-2.5 0-4 2-4 5s2 7 4 10c2-3 4-7 4-10s-1.5-5-4-5z"/><path d="M8 18c-2 1-3 2.5-3 4h14c0-1.5-1-3-3-4"/></svg>
+            </span>
+            <span class="accordion-title">Low Back Injury / Lower Back Pain</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Lower Back Pain Treatment in San Jose</h3>
+            <p>Lower back pain is one of the most common reasons people seek chiropractic care — it can range from a dull, persistent ache that slows your workday to sharp, shooting pain that makes sitting or standing unbearable. Common causes include disc herniation, muscle strain from lifting, poor posture, and spinal misalignment from an old injury or accident.</p>
+            <p>Dr. Nguyen uses targeted spinal adjustments, soft-tissue therapy, and corrective exercises to reduce pain, restore mobility, and help you stay active for the long term. Many patients feel significant relief within just a few visits.</p>
+          </div>
+        </details>
+
+        <!-- 3 ─ Neck Pain -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v4m-3 2h6"/><path d="M9 14v6m6-6v6"/></svg>
+            </span>
+            <span class="accordion-title">Neck Pain</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Neck Pain &amp; Cervical Spine Treatment</h3>
+            <p>Whether it stems from hours at a computer, sleeping at an odd angle, or a whiplash injury from a car accident, neck pain can restrict your range of motion and radiate into your shoulders, arms, and head. Stiffness, tension headaches, and tingling in the hands are all common signs that the cervical spine needs attention.</p>
+            <p>Chiropractic adjustments to the cervical spine relieve nerve compression, ease muscle tension, and restore the natural curve of your neck. Dr. Nguyen also addresses contributing factors like forward head posture — a frequent hidden culprit in recurring neck pain — to keep the problem from coming back.</p>
+          </div>
+        </details>
+
+        <!-- 4 ─ Lower Cross Syndrome -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg>
+            </span>
+            <span class="accordion-title">Lower Cross Syndrome</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Lower Cross Syndrome Relief</h3>
+            <p>Lower Cross Syndrome (LCS) is a muscle imbalance pattern common in people who sit for extended periods — think desk workers, commuters, and drivers. Overactive, tight hip flexors and lower-back extensors combine with weak, inhibited glutes and core muscles to pull the pelvis forward, creating an exaggerated lumbar curve. The result is persistent lower back pain, hip tightness, and poor posture that worsens over time.</p>
+            <p>Dr. Nguyen treats Lower Cross Syndrome by addressing the full pattern: chiropractic adjustments for the spine and pelvis, targeted release of the tight muscle groups, and activation exercises for the weak ones. This approach corrects the underlying imbalance rather than simply treating the pain.</p>
+          </div>
+        </details>
+
+        <!-- 5 ─ Shoulder Injuries -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19c0-5 3-8 8-8s8 3 8 8"/><path d="M12 11V4"/><path d="M9 7l3-3 3 3"/></svg>
+            </span>
+            <span class="accordion-title">Shoulder Injuries</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Shoulder Injury &amp; Rotator Cuff Treatment</h3>
+            <p>Shoulder pain from rotator cuff strains, impingement syndrome, frozen shoulder (adhesive capsulitis), or accident-related trauma can make it painful — or impossible — to raise your arm, reach overhead, or sleep comfortably. What many patients don't realize is that shoulder injuries are often linked to dysfunction in the cervical spine and upper back, which is why treating the shoulder alone frequently falls short.</p>
+            <p>Dr. Nguyen evaluates the full kinetic chain — from the neck and thoracic spine through the shoulder joint and surrounding musculature — to identify all contributing causes and deliver comprehensive care that restores full function.</p>
+          </div>
+        </details>
+
+        <!-- 6 ─ Knee Injury -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v5m0 8v5m-4-9h8"/><circle cx="12" cy="12" r="4"/></svg>
+            </span>
+            <span class="accordion-title">Knee Injury</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Knee Injury &amp; Knee Pain Treatment</h3>
+            <p>Knee pain — whether from an accident, sports injury, patellofemoral syndrome, or gradual wear — can sideline you from activities you love. An important principle: the knee is often the victim rather than the cause. Misalignment in the hip, pelvis, or foot places uneven stress on the knee joint, and those biomechanical problems must be corrected for lasting relief.</p>
+            <p>Dr. Nguyen's approach combines soft-tissue therapy, joint mobilization, and correction of the mechanical imbalances above and below the knee. With the right conservative care plan, many patients avoid surgery and return to full activity.</p>
+          </div>
+        </details>
+
+        <!-- 7 ─ Hip Injury -->
+        <details class="accordion-item" role="listitem">
+          <summary class="accordion-header">
+            <span class="accordion-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="10" rx="5" ry="7"/><path d="M7 17c-2 1-3 3-3 5h16c0-2-1-4-3-5"/></svg>
+            </span>
+            <span class="accordion-title">Hip Injury</span>
+            <span class="accordion-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="accordion-body">
+            <h3>Hip Injury &amp; Hip Pain Treatment</h3>
+            <p>Hip pain can stem from bursitis, labral tears, sacroiliac joint dysfunction, or direct injury, and it often presents as deep groin aching, outer hip tenderness, or pain that radiates into the buttock and thigh. Because the hip connects the spine to the lower extremity, dysfunction here can trigger a cascade of problems in the back, knee, and ankle.</p>
+            <p>Chiropractic care for hip injuries addresses joint mechanics, muscle imbalances across the pelvis, and SI joint alignment to restore pain-free movement. Dr. Nguyen treats the hip in the context of the whole body — identifying and correcting the patterns that allowed the injury to develop, so you heal fully and stay that way.</p>
+          </div>
+        </details>
+
+      </div><!-- /accordion -->
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       ABOUT DR. LAM NGUYEN
+  ========================================================== -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Photo column -->
+        <div class="about-photo">
+          <!-- TODO: Replace placeholder with actual headshot or clinic photo.
+               Recommended: 600 × 750 px portrait, professional attire, clinic setting.
+          <img
+            src="images/dr-lam-nguyen-chiropractor-san-jose.jpg"
+            alt="Dr. Lam Nguyen, D.C., founder of VAL Chiropractic, San Jose CA"
+            loading="lazy"
+            width="600" height="750"> -->
+          <div class="photo-placeholder" role="img" aria-label="Photo of Dr. Lam Nguyen coming soon">
+            <svg aria-hidden="true" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <p>Dr. Nguyen Photo<br><small>600 × 750 px</small></p>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-content">
+          <div class="section-label">Meet Your Doctor</div>
+          <h2 id="about-heading">Dr. Lam Nguyen, D.C.</h2>
+          <p class="about-subtitle">Doctor of Chiropractic · VAL Chiropractic, San Jose, CA</p>
+
+          <p>Dr. Lam Nguyen founded VAL Chiropractic with a clear mission: deliver honest, effective chiropractic care that makes a genuine difference in patients' lives. A San Jose community member, Dr. Nguyen graduated from Life Chiropractic College West in 2004 and has been serving the Evergreen and East San Jose communities ever since — opening VAL Chiropractic in 2010.</p>
+
+          <p>With over 20 years of clinical experience, Dr. Nguyen specializes in soft-tissue injuries, sports rehabilitation, and auto accident recovery. He is certified in Active Release Technique (ART) and the Graston Technique — advanced manual therapies that address the root cause of pain rather than just the symptoms. He also serves as a Qualified Medical Examiner (QME), providing independent medical evaluations for personal injury cases.</p>
+
+          <p>Dr. Nguyen's philosophy is simple: pain is a signal, not a sentence. Whether you're a competitive athlete, a desk worker, or recovering from a car accident, his goal is to relieve your pain, help you understand why it happened, and give you the tools to keep it from returning.</p>
+
+          <ul class="credentials-list" aria-label="Credentials">
+            <li>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Doctor of Chiropractic (D.C.) — Life Chiropractic College West, 2004
+            </li>
+            <li>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Certified Chiropractic Sports Physician (CCSP)
+            </li>
+            <li>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Active Release Technique (ART) Certified Provider
+            </li>
+            <li>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Graston Technique Certified Provider
+            </li>
+            <li>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Qualified Medical Examiner (QME) — State of California
+            </li>
+            <li>
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Licensed, California Board of Chiropractic Examiners
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       HOW IT WORKS / WHAT TO EXPECT
+  ========================================================== -->
+  <section id="how-it-works" aria-labelledby="hiw-heading">
+    <div class="container">
+
+      <div class="section-label">Your First Visit &amp; Beyond</div>
+      <h2 id="hiw-heading">What to Expect at VAL Chiropractic</h2>
+      <p class="section-subhead">Every step is clear, comfortable, and focused on getting you better faster.</p>
+
+      <ol class="steps-list" aria-label="Treatment process steps">
+
+        <li class="step-item">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-content">
+            <h3>Free Consultation</h3>
+            <p>Tell us about your pain, how it started, and how it's affecting your day-to-day life. We'll listen carefully and honestly discuss whether chiropractic care is the right fit for your situation — no pressure, no commitment.</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-content">
+            <h3>Comprehensive Examination</h3>
+            <p>Dr. Nguyen performs a thorough physical, orthopedic, and neurological evaluation including postural analysis, range-of-motion testing, and orthopedic stress tests. If X-rays or advanced imaging are needed, we'll refer you to the right facility and review the results together.</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-content">
+            <h3>Personalized Treatment Plan</h3>
+            <p>Based on your examination findings, Dr. Nguyen builds a treatment plan designed around your specific injuries, goals, and schedule. He explains every step so you always know exactly what to expect and why each piece matters.</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-number" aria-hidden="true">04</div>
+          <div class="step-content">
+            <h3>Ongoing Care &amp; Recovery</h3>
+            <p>As you progress, your plan evolves with you. We track your improvements at every visit, adjust your care as needed, and teach you the stretches, exercises, and lifestyle habits that protect your results long after treatment ends.</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       WHY CHOOSE VAL CHIROPRACTIC
+  ========================================================== -->
+  <section id="why-choose" aria-labelledby="why-heading">
+    <div class="container">
+
+      <div class="section-label">Why Patients Choose Us</div>
+      <h2 id="why-heading">The VAL Chiropractic Difference</h2>
+
+      <div class="benefits-grid">
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Genuinely Personalized Care</h3>
+          <p>No two patients are the same. Every treatment plan is built around your specific condition, lifestyle, and goals — never a cookie-cutter protocol.</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Personal Injury Specialists</h3>
+          <p>We specialize in auto accident recovery and work on lien so you have no upfront costs. Our detailed documentation supports your legal case every step of the way.</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Convenient San Jose Location</h3>
+          <p>Centrally located on S White Road in San Jose, we're easy to reach from Evergreen, East San Jose, and the surrounding communities. Free on-site parking available.</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Family-Friendly Practice</h3>
+          <p>We welcome patients of all ages — from children to seniors. VAL Chiropractic is a warm, family-oriented practice where everyone is treated with respect and care.</p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3>Insurance &amp; Flexible Billing</h3>
+          <p>We accept most major health insurance, auto insurance (MedPay/PIP), and offer lien billing for personal injury cases.
+            <!-- TODO: List specific accepted insurances (e.g., Anthem, Blue Shield, Aetna) -->
+            Call us to verify your coverage.
+          </p>
+        </article>
+
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Evidence-Based Approach</h3>
+          <p>Dr. Nguyen combines proven chiropractic techniques with current best practices in rehabilitation and soft-tissue therapy — delivering lasting, measurable outcomes, not temporary fixes.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       REVIEWS / TESTIMONIALS
+  ========================================================== -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+
+      <div class="section-label">Patient Reviews</div>
+      <h2 id="reviews-heading">What Our Patients Say</h2>
+      <p class="section-subhead">
+        4.5 stars on Yelp · 136 reviews · Trusted by San Jose patients since 2010.
+      </p>
+
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote>
+            <p>"Can't recommend Dr. Nguyen enough! He is super informative and great at explaining what is going on, what you need to do outside of appointments as supplementary exercises. Great doctor with a lot of knowledge."</p>
+          </blockquote>
+          <footer class="review-author">
+            <strong>Verified Patient</strong>
+            <span>San Jose, CA · July 2025</span>
+          </footer>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote>
+            <p>"I've been a patient of Dr. Lam's for years. He has helped me improve my posture and deal with the many issues I have had including sports injuries, car accidents, surgery, etc. He's absolutely the best, especially if you're an athlete. Other professionals I've seen — including PTs, MDs, and even surgeons — do not have his depth of understanding and ability to actually fix things. Can't recommend this practice enough."</p>
+          </blockquote>
+          <footer class="review-author">
+            <strong>Verified Patient</strong>
+            <span>San Jose, CA · June 2025</span>
+          </footer>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <blockquote>
+            <p>"I have had a frozen shoulder and a frozen hip. I have tried cortisone injections, physical therapy, other chiropractors. No one has been able to give me full movement in my hip and shoulder again except Dr. Lam Nguyen. He's the BEST!!"</p>
+          </blockquote>
+          <footer class="review-author">
+            <strong>Verified Patient</strong>
+            <span>San Jose, CA · June 2025</span>
+          </footer>
+        </article>
+
+      </div><!-- /reviews-grid -->
+
+      <div class="review-ctas">
+        <p>Satisfied with your care at VAL Chiropractic? Help others find us:</p>
+        <div class="review-links">
+          <a href="https://www.google.com/maps/search/VAL+Chiropractic+3239+S+White+Rd+San+Jose+CA+95148" target="_blank" rel="noopener noreferrer" class="btn btn-outline review-btn">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Leave a Google Review
+          </a>
+          <a href="https://www.yelp.com/biz/val-chiropractic-san-jose-2" target="_blank" rel="noopener noreferrer" class="btn btn-outline review-btn">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#D32323" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.311.124-.623.094-.851-.083-.148-.12-.258-.3-1.08-1.73l-1.015-1.742c-.281-.47-.568-.955-.55-1.527.023-.697.469-1.243 1.075-1.513.044-.02.717-.275.717-.275.654-.248 1.23-.182 1.622.257.148.162 1.927 2.888 1.927 2.888.274.39.258.839.184 1.278zM13.207 17.2c-.257.552-.844.87-1.511.786l-.024-.002-1.988-.289c-.584-.08-1.154-.168-1.539-.6-.529-.598-.527-1.366-.217-2.013.01-.022.33-.645.33-.645.303-.589.792-.921 1.35-.861.201.021 3.345.624 3.345.624.489.092.82.479.886.966.088.636-.152 1.347-.632 2.034zM19.934 11.399c-.254.93-2.93 2.196-3.868 2.219-.316.008-.594-.1-.772-.305-.12-.139-.182-.325-.164-1.996l.02-2.009c.008-.559.02-1.132.433-1.528.536-.511 1.296-.505 1.973-.263.044.016.705.262.705.262.655.252 1.03.76.966 1.31-.024.198-.628 3.349-.628 3.349-.08.494-.43.832-.665.961zM11.14 10.796c.007.609-.348 1.143-.926 1.346l-.023.008-1.895.587c-.557.164-1.101.329-1.613.1-.703-.315-1.001-1.02-.886-1.747.004-.024.117-.706.117-.706.112-.654.511-1.09 1.061-1.145.197-.02 3.383-.173 3.383-.173.497-.021.892.324 1.006.803.147.617.063 1.323-.224 1.927zM12.764 3.068c.455.855.295 4.26-.075 5.141-.13.307-.348.518-.603.579-.175.042-.367.016-1.823-.786L8.39 6.884c-.498-.279-.987-.552-1.167-1.07-.244-.706.064-1.419.601-1.852.018-.014.572-.433.572-.433.536-.4 1.14-.434 1.625-.05.175.139 2.408 2.125 2.408 2.125.354.312.429.753.335 1.194v.27z"/>
+            </svg>
+            Leave a Yelp Review
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       LOCATION & HOURS
+  ========================================================== -->
+  <section id="location" aria-labelledby="location-heading">
+    <div class="container">
+
+      <div class="section-label">Find Us</div>
+      <h2 id="location-heading">Location &amp; Hours</h2>
+
+      <div class="location-grid">
+
+        <!-- Google Map embed -->
+        <!-- TODO: For the most accurate pin, generate a custom embed:
+             1. Go to maps.google.com and search "3239 S White Rd, San Jose, CA 95148"
+             2. Click Share → Embed a map
+             3. Replace the src below with the generated iframe src URL -->
+        <div class="map-wrapper">
+          <iframe
+            src="https://maps.google.com/maps?q=3239+S+White+Rd,+San+Jose,+CA+95148&output=embed"
+            width="100%"
+            height="420"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="VAL Chiropractic location — 3239 S White Road, San Jose, CA"
+            aria-label="Google Maps showing VAL Chiropractic at 3239 S White Road, San Jose, CA">
+          </iframe>
+        </div>
+
+        <!-- Info panel -->
+        <div class="location-info">
+
+          <div class="info-block">
+            <h3>
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Address
+            </h3>
+            <address>
+              VAL Chiropractic<br>
+              3239 S White Road<br>
+              San Jose, CA 95148
+            </address>
+            <a
+              href="https://maps.google.com/?q=3239+S+White+Rd,+San+Jose,+CA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline btn-sm">
+              Get Directions
+            </a>
+          </div>
+
+          <div class="info-block">
+            <h3>
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Office Hours
+            </h3>
+            <dl class="hours-list">
+              <div class="hours-row"><dt>Monday</dt><dd>9:00 AM – 6:00 PM</dd></div>
+              <div class="hours-row"><dt>Tuesday</dt><dd>9:00 AM – 3:00 PM</dd></div>
+              <div class="hours-row"><dt>Wednesday</dt><dd>9:00 AM – 6:00 PM</dd></div>
+              <div class="hours-row"><dt>Thursday</dt><dd>9:00 AM – 6:00 PM</dd></div>
+              <div class="hours-row"><dt>Friday</dt><dd>9:00 AM – 3:00 PM</dd></div>
+              <div class="hours-row"><dt>Saturday</dt><dd>Closed</dd></div>
+              <div class="hours-row"><dt>Sunday</dt><dd>Closed</dd></div>
+            </dl>
+          </div>
+
+          <div class="info-block">
+            <h3>
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
+              Phone
+            </h3>
+            <a href="tel:+14085321139" class="phone-link">(408) 532-1139</a>
+            <p class="parking-note">
+              <!-- TODO: Confirm parking details -->
+              Free on-site parking available.
+            </p>
+          </div>
+
+        </div><!-- /location-info -->
+      </div><!-- /location-grid -->
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       CONTACT / BOOK APPOINTMENT
+  ========================================================== -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+
+      <div class="section-label">Get in Touch</div>
+      <h2 id="contact-heading">Book an Appointment</h2>
+      <p class="section-subhead">
+        Call us or send a message and we'll get back to you within one business day.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- Contact info column -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <ul class="contact-list">
+            <li>
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
+              <a href="tel:+14085321139">(408) 532-1139</a>
+            </li>
+            <li>
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <!-- Email built by JS to prevent scraping — see script block below -->
+              <span id="contact-email-link"><!-- injected by JS --></span>
+            </li>
+            <li>
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <address>3239 S White Road, San Jose, CA 95148</address>
+            </li>
+          </ul>
+
+          <div class="accident-cta-box">
+            <strong>Were you in a car accident?</strong>
+            <p>Don't wait. Early documentation strengthens your case. Call for same-day or next-day appointment.</p>
+            <a href="tel:+14085321139" class="btn btn-primary">Call for Accident Care</a>
+          </div>
+        </div>
+
+        <!-- Contact form column
+             This form uses Netlify's built-in form handling.
+             HOW TO ENABLE NETLIFY FORMS:
+               • The `data-netlify="true"` and `name="contact"` attributes are already set.
+               • Deploy to Netlify — Netlify auto-detects the form on first deploy.
+               • Set `action="/thank-you"` and create a thank-you.html page, OR remove
+                 action and Netlify will show a default confirmation.
+             HOW TO SWITCH TO MAILTO FALLBACK (no Netlify):
+               • Remove data-netlify="true", netlify-honeypot, and the hidden inputs.
+               • Change method to GET and action to "mailto:your@email.com"
+               • Add enctype="text/plain"
+               • This opens the user's email client — less ideal, but zero backend needed.
+        -->
+        <form
+          id="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you"
+          aria-label="Appointment request form"
+          novalidate>
+
+          <input type="hidden" name="form-name" value="contact">
+          <!-- Honeypot: bots fill this, humans don't — Netlify ignores submissions with it filled -->
+          <p aria-hidden="true" style="display:none;">
+            <label>Leave this blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="form-group">
+            <label for="f-name">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="name" autocomplete="name" required aria-required="true" placeholder="Jane Smith">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-phone">Phone <span aria-hidden="true">*</span></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" required aria-required="true" placeholder="(408) 555-0100">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" placeholder="jane@example.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-reason">Reason for Visit</label>
+            <select id="f-reason" name="reason">
+              <option value="">Select a reason…</option>
+              <option value="auto-accident">Auto Accident / Personal Injury</option>
+              <option value="back-pain">Lower Back Pain</option>
+              <option value="neck-pain">Neck Pain</option>
+              <option value="lower-cross-syndrome">Lower Cross Syndrome</option>
+              <option value="shoulder">Shoulder Injury</option>
+              <option value="knee">Knee Injury</option>
+              <option value="hip">Hip Injury</option>
+              <option value="other">Other / General Pain</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your pain or injury, how it started, and the best time to reach you."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+          <p class="form-note">Your information is kept private and never shared. By submitting you agree to be contacted by VAL Chiropractic regarding your inquiry.</p>
+
+        </form>
+
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+</main><!-- /main -->
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+
+    <div class="footer-col footer-brand">
+      <a href="#" class="site-logo" aria-label="VAL Chiropractic — return to top">
+        <span class="logo-mark">VAL</span>
+        <span class="logo-text">Chiropractic</span>
+      </a>
+      <p>Family chiropractic care &amp; personal injury specialists in San Jose, CA.</p>
+      <div class="footer-social">
+        <a href="https://www.google.com/maps/search/VAL+Chiropractic+3239+S+White+Rd+San+Jose+CA+95148" target="_blank" rel="noopener noreferrer" aria-label="VAL Chiropractic on Google Business">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Google
+        </a>
+        <a href="https://www.yelp.com/biz/val-chiropractic-san-jose-2" target="_blank" rel="noopener noreferrer" aria-label="VAL Chiropractic on Yelp">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.311.124-.623.094-.851-.083-.148-.12-.258-.3-1.08-1.73l-1.015-1.742c-.281-.47-.568-.955-.55-1.527.023-.697.469-1.243 1.075-1.513.044-.02.717-.275.717-.275.654-.248 1.23-.182 1.622.257.148.162 1.927 2.888 1.927 2.888.274.39.258.839.184 1.278z"/></svg>
+          Yelp
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul role="list">
+        <li><a href="#personal-injury">Personal Injury</a></li>
+        <li><a href="#conditions">Conditions Treated</a></li>
+        <li><a href="#about">About Dr. Nguyen</a></li>
+        <li><a href="#reviews">Patient Reviews</a></li>
+        <li><a href="#location">Location &amp; Hours</a></li>
+        <li><a href="#contact">Book Appointment</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Conditions</h4>
+      <ul role="list">
+        <li><a href="#conditions">Auto Accident Recovery</a></li>
+        <li><a href="#conditions">Lower Back Pain</a></li>
+        <li><a href="#conditions">Neck Pain</a></li>
+        <li><a href="#conditions">Lower Cross Syndrome</a></li>
+        <li><a href="#conditions">Shoulder Injuries</a></li>
+        <li><a href="#conditions">Knee Injury</a></li>
+        <li><a href="#conditions">Hip Injury</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        3239 S White Road<br>
+        San Jose, CA 95148
+      </address>
+      <p><a href="tel:+14085321139">(408) 532-1139</a></p>
+      <p id="footer-email-link"><!-- injected by JS --></p>
+      <h4 style="margin-top:1.25rem;">Hours</h4>
+      <p class="footer-hours">
+        Mon / Wed / Thu: 9:00 AM – 6:00 PM<br>
+        Tue / Fri: 9:00 AM – 3:00 PM<br>
+        Sat – Sun: Closed
+      </p>
+    </div>
+
+  </div><!-- /footer-grid -->
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="copyright-year"></span> VAL Chiropractic. All rights reserved. · 3239 S White Road, San Jose, CA 95148</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE CALL BAR (CSS shows only ≤767px)
+============================================================ -->
+<div class="mobile-call-bar" role="region" aria-label="Quick contact">
+  <a href="tel:+14085321139" class="mobile-call-btn">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
+    Call Now
+  </a>
+  <a href="#contact" class="mobile-book-btn">Book Appointment</a>
+</div>
+
+<!-- ============================================================
+     CHAT WIDGET
+     Default mode: "Contact us" shortcut (works with zero backend).
+     TO UPGRADE TO AI CHAT (Claude Haiku via Netlify Function):
+       1. Create netlify/functions/chat.js — template in the JS block below
+       2. Set ANTHROPIC_API_KEY in Netlify dashboard → Site settings → Env vars
+       3. In the JS below, flip: var CHAT_ENABLED = false  →  true
+============================================================ -->
+<div id="chat-widget" aria-live="polite" aria-label="Chat widget">
+
+  <!-- Panel -->
+  <div id="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-panel-title" hidden>
+    <div class="chat-header">
+      <div class="chat-avatar" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="chat-header-info">
+        <div class="chat-header-name" id="chat-panel-title">VAL Chiropractic</div>
+        <div class="chat-header-status">
+          <span class="chat-status-dot" aria-hidden="true"></span>
+          Ask us anything
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="chat-messages" role="log" aria-label="Chat messages">
+      <!-- Initial bot greeting rendered by JS -->
+    </div>
+    <div class="chat-typing" id="chat-typing" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+
+    <form class="chat-input-row" id="chat-form" autocomplete="off" aria-label="Send a message">
+      <input
+        type="text"
+        id="chat-input"
+        name="message"
+        placeholder="Type a question…"
+        aria-label="Your message"
+        maxlength="300"
+        autocomplete="off">
+      <button type="submit" id="chat-send" aria-label="Send message">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </form>
+
+    <p class="chat-powered">
+      Powered by <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">Claude AI</a>
+    </p>
+  </div>
+
+  <!-- Trigger button -->
+  <button
+    id="chat-trigger"
+    aria-expanded="false"
+    aria-controls="chat-panel"
+    aria-label="Open chat — ask a question">
+    <!-- Chat icon (shown when closed) -->
+    <svg class="icon-chat" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <!-- Close icon (shown when open) -->
+    <svg class="icon-close" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+
+</div><!-- /chat-widget -->
+
+<!-- ============================================================
+     JAVASCRIPT
+     - Mobile nav toggle (iOS-safe, visibility-guarded)
+     - Header shadow on scroll
+     - Scroll-reveal via IntersectionObserver
+     - Accordion: one-open-at-a-time
+     - Email obfuscation (JS string concat, Cloudflare-safe)
+     - Copyright year
+============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Mobile nav toggle ──────────────────────────────────── */
+  var toggle = document.querySelector('.nav-toggle');
+  var drawer = document.getElementById('mobile-nav');
+
+  if (toggle && drawer) {
+    toggle.addEventListener('click', function () {
+      var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      drawer.setAttribute('aria-hidden', String(isOpen));
+      drawer.classList.toggle('is-open', !isOpen);
+      document.body.classList.toggle('nav-open', !isOpen);
+    });
+
+    // Close drawer on any internal link tap
+    drawer.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        drawer.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+      });
+    });
+
+    // Close drawer on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        drawer.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+        toggle.focus();
+      }
+    });
+  }
+
+  /* ── Header scroll shadow ───────────────────────────────── */
+  var header = document.getElementById('site-header');
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle('is-scrolled', window.scrollY > 10);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ── Scroll reveal (IntersectionObserver) ───────────────── */
+  // Adds .reveal to sections + cards, then observes them.
+  // Respects prefers-reduced-motion via the CSS class itself.
+  var revealTargets = [
+    '#personal-injury .pi-card',
+    '#personal-injury .pi-steps-box',
+    '#conditions .accordion-item',
+    '#about .about-grid',
+    '#how-it-works .step-item',
+    '#why-choose .benefit-card',
+    '#reviews .review-card',
+    '#location .location-grid',
+    '#contact .contact-grid',
+  ];
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+    revealTargets.forEach(function (selector) {
+      document.querySelectorAll(selector).forEach(function (el, i) {
+        el.classList.add('reveal');
+        // Stagger siblings by a small delay via inline style
+        el.style.transitionDelay = (i * 60) + 'ms';
+        observer.observe(el);
+      });
+    });
+  }
+
+  /* ── Accordion: one open at a time ─────────────────────── */
+  var accordionItems = document.querySelectorAll('.accordion-item');
+  accordionItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (item.open) {
+        accordionItems.forEach(function (other) {
+          if (other !== item && other.open) { other.open = false; }
+        });
+      }
+    });
+  });
+
+  /* ── Email obfuscation ──────────────────────────────────────
+     TODO: Update u / d / t with the real address parts.
+     Assembling via string concat keeps Cloudflare Email Protection
+     from rewriting or stripping the address out of the DOM.
+  ────────────────────────────────────────────────────────────── */
+  var u = 'lamnguyendc'; // ← local part (before @)
+  var d = 'gmail'; // ← domain name
+  var t = 'com';             // ← TLD
+  var addr    = u + '@' + d + '.' + t;
+  var mailTag = '<a href="mailto:' + addr + '">' + addr + '</a>';
+
+  var ce = document.getElementById('contact-email-link');
+  var fe = document.getElementById('footer-email-link');
+  if (ce) ce.innerHTML = mailTag;
+  if (fe) fe.innerHTML = mailTag;
+
+  /* ── Copyright year ─────────────────────────────────────── */
+  var yr = document.getElementById('copyright-year');
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ── Chat widget ─────────────────────────────────────────
+     CHAT_ENABLED = false  →  shows contact shortcuts (no backend needed)
+     CHAT_ENABLED = true   →  calls /.netlify/functions/chat (needs backend)
+
+     HOW TO ENABLE AI CHAT:
+     ─────────────────────────────────────────────────────────
+     1. Create this file in your repo:
+        netlify/functions/chat.js
+        ────────────────────────────────────────────────────
+        const Anthropic = require('@anthropic-ai/sdk');
+        exports.handler = async (event) => {
+          if (event.httpMethod !== 'POST') return { statusCode: 405 };
+          try {
+            const { message, history } = JSON.parse(event.body || '{}');
+            const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+            const resp = await client.messages.create({
+              model: 'claude-haiku-4-5-20251001',
+              max_tokens: 512,
+              system: `You are a helpful front-desk assistant for VAL Chiropractic
+                in San Jose, CA. Dr. Lam Nguyen, D.C. specializes in personal injury,
+                auto accident recovery, lower back pain, neck pain, Lower Cross Syndrome,
+                shoulder injuries, knee injuries, and hip injuries.
+                Address: 3239 S White Road, San Jose, CA.
+                Phone: (408) 532-1139. Hours: Mon/Wed/Thu 9am-6pm, Tue/Fri 9am-3pm, closed weekends.
+                Always encourage scheduling a consultation. Never give specific
+                medical advice. Keep responses concise and friendly.`,
+              messages: [...(history || []), { role: 'user', content: message }]
+            });
+            return {
+              statusCode: 200,
+              headers: { 'Content-Type': 'application/json',
+                         'Access-Control-Allow-Origin': '*' },
+              body: JSON.stringify({ reply: resp.content[0].text })
+            };
+          } catch (e) {
+            return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+          }
+        };
+        ────────────────────────────────────────────────────
+     2. npm install @anthropic-ai/sdk  (in repo root or functions folder)
+     3. Set ANTHROPIC_API_KEY in Netlify → Site settings → Environment variables
+     4. Change CHAT_ENABLED below from false to true
+     ───────────────────────────────────────────────────────── */
+
+  var CHAT_ENABLED = false;   // ← flip to true after deploying Netlify function
+  var NETLIFY_FN   = '/.netlify/functions/chat';
+
+  var chatWidget   = document.getElementById('chat-widget');
+  var chatTrigger  = document.getElementById('chat-trigger');
+  var chatPanel    = document.getElementById('chat-panel');
+  var chatMessages = document.getElementById('chat-messages');
+  var chatForm     = document.getElementById('chat-form');
+  var chatInput    = document.getElementById('chat-input');
+  var chatTyping   = document.getElementById('chat-typing');
+
+  if (!chatWidget || !chatTrigger || !chatPanel) return;
+
+  var chatHistory = [];   // tracks messages for multi-turn context
+  var chatOpened  = false;
+
+  // Remove the hidden attribute so CSS controls visibility instead
+  chatPanel.removeAttribute('hidden');
+
+  function addBubble(role, html) {
+    var div = document.createElement('div');
+    div.className = 'chat-bubble ' + role;
+    div.innerHTML = html;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return div;
+  }
+
+  function renderGreeting() {
+    if (CHAT_ENABLED) {
+      addBubble('bot',
+        '<p>Hi! I\'m the VAL Chiropractic assistant. Ask me anything about our services, hours, or how we can help — or <a href="#contact">book an appointment</a>.</p>'
+      );
+    } else {
+      // Contact-shortcut mode (no backend wired yet)
+      addBubble('bot',
+        '<p>Hi! Have a question? The fastest way to reach us:</p>' +
+        '<p><strong><a href="tel:+14085321139">📞 Call: (408) 532-1139</a></strong><br>' +
+        '<a href="#contact">Or send us a message →</a></p>'
+      );
+    }
+  }
+
+  // Toggle open/close
+  chatTrigger.addEventListener('click', function () {
+    var isOpen = chatWidget.classList.toggle('is-open');
+    chatTrigger.setAttribute('aria-expanded', String(isOpen));
+    if (isOpen) {
+      if (!chatOpened) { renderGreeting(); chatOpened = true; }
+      chatInput.focus();
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && chatWidget.classList.contains('is-open')) {
+      chatWidget.classList.remove('is-open');
+      chatTrigger.setAttribute('aria-expanded', 'false');
+      chatTrigger.focus();
+    }
+  });
+
+  // Send message
+  chatForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var msg = chatInput.value.trim();
+    if (!msg) return;
+    chatInput.value = '';
+
+    addBubble('user', msg);
+    chatHistory.push({ role: 'user', content: msg });
+
+    if (!CHAT_ENABLED) {
+      // Contact shortcut response
+      setTimeout(function () {
+        addBubble('bot',
+          '<p>I\'m not fully set up for live chat yet! Please <a href="tel:+14085321139">call us</a> or use the <a href="#contact">contact form</a> and we\'ll get back to you within one business day.</p>'
+        );
+      }, 500);
+      return;
+    }
+
+    // AI mode — call Netlify function
+    chatTyping.classList.add('is-visible');
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    fetch(NETLIFY_FN, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: msg, history: chatHistory.slice(-6) })
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      chatTyping.classList.remove('is-visible');
+      if (data.reply) {
+        var reply = data.reply.replace(/\n/g, '<br>');
+        addBubble('bot', '<p>' + reply + '</p>');
+        chatHistory.push({ role: 'assistant', content: data.reply });
+      } else {
+        throw new Error('empty reply');
+      }
+    })
+    .catch(function () {
+      chatTyping.classList.remove('is-visible');
+      addBubble('bot',
+        '<p>Sorry, something went wrong. Please <a href="tel:+14085321139">call us</a> or use the <a href="#contact">contact form</a>.</p>'
+      );
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
