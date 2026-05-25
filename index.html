@@ -783,6 +783,14 @@ body.nav-open { overflow: hidden; }
 }
 .review-card:hover { box-shadow: var(--shadow-md); }
 .review-stars { font-size: 1.05rem; color: #f59e0b; letter-spacing: .04em; }
+.stars-gold { color: #f59e0b; }
+.star-half {
+  display: inline-block; position: relative; color: #d1d5db;
+}
+.star-half::before {
+  content: '★'; position: absolute; left: 0; top: 0;
+  color: #f59e0b; clip-path: inset(0 50% 0 0);
+}
 .review-card blockquote p {
   font-style: italic; font-size: .93rem;
   color: var(--text-muted); line-height: 1.72; margin: 0;
@@ -1348,7 +1356,7 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
             <span>Years in Practice</span>
           </li>
           <li class="trust-item">
-            <strong><span aria-hidden="true">★★★★★</span><span class="sr-only">4.5 stars</span> 4.5</strong>
+            <strong><span class="stars-gold" aria-hidden="true">★★★★<span class="star-half">★</span></span><span class="sr-only">4.5 out of 5 stars</span> 4.5</strong>
             <span>Yelp Rating · 136 Reviews</span>
           </li>
           <li class="trust-item">
@@ -2369,8 +2377,15 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
      4. Change CHAT_ENABLED below from false to true
      ───────────────────────────────────────────────────────── */
 
-  var CHAT_ENABLED = false;   // ← flip to true after deploying Netlify function
-  var NETLIFY_FN   = '/.netlify/functions/chat';
+  var CHAT_ENABLED   = true;
+  var ANTHROPIC_KEY  = 'YOUR_ANTHROPIC_API_KEY_HERE'; // ← paste your key
+  var CHAT_SYSTEM    = 'You are a helpful front-desk assistant for VAL Chiropractic in San Jose, CA. ' +
+    'Dr. Lam Nguyen, D.C. specializes in personal injury, auto accident recovery, lower back pain, ' +
+    'neck pain, Lower Cross Syndrome, shoulder, knee, and hip injuries. ' +
+    'Address: 3239 S White Road, San Jose, CA 95148. ' +
+    'Phone: (408) 532-1139. Hours: Mon/Wed/Thu 9am–6pm, Tue/Fri 9am–3pm, closed weekends. ' +
+    'Always encourage scheduling a consultation. Never give specific medical advice. ' +
+    'Keep responses concise, warm, and friendly.';
 
   var chatWidget   = document.getElementById('chat-widget');
   var chatTrigger  = document.getElementById('chat-trigger');
@@ -2451,22 +2466,37 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
       return;
     }
 
-    // AI mode — call Netlify function
+    // AI mode — call Anthropic API directly
     chatTyping.classList.add('is-visible');
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    fetch(NETLIFY_FN, {
+    var messages = chatHistory.slice(-10).map(function(m) {
+      return { role: m.role, content: m.content };
+    });
+
+    fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: msg, history: chatHistory.slice(-6) })
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 512,
+        system: CHAT_SYSTEM,
+        messages: messages
+      })
     })
     .then(function (res) { return res.json(); })
     .then(function (data) {
       chatTyping.classList.remove('is-visible');
-      if (data.reply) {
-        var reply = data.reply.replace(/\n/g, '<br>');
+      var text = data.content && data.content[0] && data.content[0].text;
+      if (text) {
+        var reply = text.replace(/\n/g, '<br>');
         addBubble('bot', '<p>' + reply + '</p>');
-        chatHistory.push({ role: 'assistant', content: data.reply });
+        chatHistory.push({ role: 'assistant', content: text });
       } else {
         throw new Error('empty reply');
       }
