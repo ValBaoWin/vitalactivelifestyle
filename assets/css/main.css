@@ -564,6 +564,7 @@ body.nav-open { overflow: hidden; }
 .review-card:hover { box-shadow: var(--shadow-md); }
 .review-stars { font-size: 1.05rem; color: #f59e0b; letter-spacing: .04em; }
 .stars-gold { color: #f59e0b; }
+.trust-item .stars-gold { color: #f59e0b; }
 .star-half {
   display: inline-block; position: relative; color: #d1d5db;
 }
