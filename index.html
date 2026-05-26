@@ -1003,7 +1003,7 @@
         </div>
 
         <!-- Contact form column
-             This form uses Netlify's built-in form handling.
+             This form submits to Formspree (https://formspree.io/f/xdajwpvk).
              HOW TO ENABLE NETLIFY FORMS:
                • The `data-netlify="true"` and `name="contact"` attributes are already set.
                • Deploy to Netlify — Netlify auto-detects the form on first deploy.
@@ -1019,17 +1019,9 @@
           id="contact-form"
           name="contact"
           method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thank-you"
+          action="https://formspree.io/f/xdajwpvk"
           aria-label="Appointment request form"
           novalidate>
-
-          <input type="hidden" name="form-name" value="contact">
-          <!-- Honeypot: bots fill this, humans don't — Netlify ignores submissions with it filled -->
-          <p aria-hidden="true" style="display:none;">
-            <label>Leave this blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
-          </p>
 
           <div class="form-group">
             <label for="f-name">Full Name <span aria-hidden="true">*</span></label>
