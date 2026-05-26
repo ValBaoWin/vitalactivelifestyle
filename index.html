@@ -1077,10 +1077,14 @@
               var status = document.getElementById('form-status');
               btn.disabled = true;
               btn.textContent = 'Sending…';
+              var data = new URLSearchParams(new FormData(form));
               fetch(form.action, {
                 method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
+                body: data,
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded',
+                  'Accept': 'application/json'
+                }
               }).then(function(res){
                 if(res.ok){
                   status.textContent = 'Message sent! We\'ll be in touch shortly.';
