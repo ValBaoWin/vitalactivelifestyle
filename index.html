@@ -626,12 +626,10 @@
             alt="Dr. Lam Nguyen, D.C., founder of VAL Chiropractic, San Jose CA"
             loading="lazy"
             width="600" height="750"> -->
-          <img
-            src="assets/images/clinic-treatment-room-1.jpg"
-            alt="VAL Chiropractic treatment room in San Jose, CA — clean, professional space with hardwood floors and anatomy art"
-            loading="lazy"
-            width="600" height="750"
-            style="width:100%;height:auto;border-radius:12px;object-fit:cover;">
+          <div class="photo-placeholder" role="img" aria-label="Photo of Dr. Lam Nguyen coming soon">
+            <svg aria-hidden="true" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <p>Dr. Nguyen Photo<br><small>Coming Soon</small></p>
+          </div>
         </div>
 
         <!-- Text column -->
@@ -825,33 +823,60 @@
   </section>
 
   <!-- ==========================================================
-       IN-OFFICE GYM / REHAB
+       A LOOK INSIDE OUR OFFICE
   ========================================================== -->
-  <section id="gym" aria-labelledby="gym-heading" style="background:var(--g-900);padding:var(--s20) 0;">
+  <section id="gym" aria-labelledby="office-tour-heading" style="background:var(--g-900);padding:var(--s20) 0;">
     <div class="container">
-      <div class="section-label" style="color:var(--cream-100);opacity:.7;">Rehabilitation &amp; Strength</div>
-      <h2 id="gym-heading" style="color:#fff;font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:.75rem;">In-Office Rehabilitation Gym</h2>
-      <p style="color:rgba(255,255,255,.75);max-width:640px;margin-bottom:var(--s10);font-size:1.05rem;">Most chiropractic offices stop at the adjustment table. VAL Chiropractic goes further — with a fully equipped rehabilitation gym on-site so your strengthening and movement work happens here, under Dr. Nguyen's supervision, not somewhere else.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:var(--s10);">
-        <img src="assets/images/gym-power-rack.jpg" alt="VAL Chiropractic in-office rehabilitation gym with Rogue power rack and bumper plates in San Jose" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:10px;">
-        <img src="assets/images/gym-dumbbells.jpg" alt="Full dumbbell rack at VAL Chiropractic rehabilitation gym" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:10px;">
-        <img src="assets/images/gym-barbell-rack.jpg" alt="Rogue barbell and weight plates in VAL Chiropractic rehab gym" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:10px;">
+      <div class="section-label" style="color:var(--cream-100);opacity:.7;">San Jose, CA</div>
+      <h2 id="office-tour-heading" style="color:#fff;font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:.75rem;">A Look Inside Our Office</h2>
+      <p style="color:rgba(255,255,255,.75);max-width:660px;margin-bottom:var(--s10);font-size:1.05rem;">From clean, comfortable treatment rooms to a fully equipped rehabilitation gym — VAL Chiropractic is built to take you from pain relief all the way through to strength and injury prevention.</p>
+
+      <!-- Hallway hero image -->
+      <img src="assets/images/clinic-hallway.jpg" alt="VAL Chiropractic office hallway in San Jose leading to rehabilitation gym" loading="lazy" style="width:100%;height:360px;object-fit:cover;border-radius:12px;margin-bottom:1rem;">
+
+      <!-- Treatment rooms row -->
+      <p style="color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">Treatment Rooms</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div>
+          <img src="assets/images/clinic-treatment-room-1.jpg" alt="VAL Chiropractic treatment room with chiropractic table and The Great Wave artwork" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:10px;">
+          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Private treatment room with adjusting table</p>
+        </div>
+        <div>
+          <img src="assets/images/clinic-treatment-room-2.jpg" alt="VAL Chiropractic second treatment room with electric adjusting table and spinal anatomy charts" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:10px;">
+          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Electric height-adjustable table and anatomy references</p>
+        </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:var(--s6);">
+
+      <!-- Gym row -->
+      <p style="color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">Rehabilitation Gym</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:var(--s10);">
+        <div>
+          <img src="assets/images/gym-power-rack.jpg" alt="Rogue power rack and bumper plates in VAL Chiropractic rehabilitation gym" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
+          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Rogue power rack &amp; barbells</p>
+        </div>
+        <div>
+          <img src="assets/images/gym-dumbbells.jpg" alt="Full hex dumbbell rack at VAL Chiropractic rehab gym" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
+          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Full hex dumbbell set</p>
+        </div>
+        <div>
+          <img src="assets/images/gym-barbell-rack.jpg" alt="Barbell and weight storage at VAL Chiropractic" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
+          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Olympic plates &amp; loading station</p>
+        </div>
+      </div>
+
+      <!-- Three feature cards -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
         <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1.25rem 1.5rem;">
-          <div style="font-size:1.4rem;margin-bottom:.4rem;">🏋️</div>
-          <strong style="color:#fff;display:block;margin-bottom:.3rem;">Rogue Equipment</strong>
-          <p style="color:rgba(255,255,255,.65);font-size:.9rem;margin:0;">Power rack, barbells, bumper plates, dumbbells, resistance bands, and conditioning tools.</p>
+          <strong style="color:#fff;display:block;margin-bottom:.4rem;">Professional-Grade Equipment</strong>
+          <p style="color:rgba(255,255,255,.6);font-size:.9rem;margin:0;">Rogue power rack, barbells, bumper plates, hex dumbbells, resistance bands, and conditioning tools — the same equipment elite athletes train with.</p>
         </div>
         <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1.25rem 1.5rem;">
-          <div style="font-size:1.4rem;margin-bottom:.4rem;">🎯</div>
-          <strong style="color:#fff;display:block;margin-bottom:.3rem;">Supervised Rehab</strong>
-          <p style="color:rgba(255,255,255,.65);font-size:.9rem;margin:0;">Dr. Nguyen prescribes and supervises your corrective exercises — not a handout, not guesswork.</p>
+          <strong style="color:#fff;display:block;margin-bottom:.4rem;">Supervised Rehabilitation</strong>
+          <p style="color:rgba(255,255,255,.6);font-size:.9rem;margin:0;">Dr. Nguyen prescribes and supervises your corrective exercise program on-site — not a printout you do at home alone.</p>
         </div>
         <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1.25rem 1.5rem;">
-          <div style="font-size:1.4rem;margin-bottom:.4rem;">⚡</div>
-          <strong style="color:#fff;display:block;margin-bottom:.3rem;">Beyond the Adjustment</strong>
-          <p style="color:rgba(255,255,255,.65);font-size:.9rem;margin:0;">Chiropractic restores joint function. Strength training and movement work keeps it there.</p>
+          <strong style="color:#fff;display:block;margin-bottom:.4rem;">Beyond the Adjustment</strong>
+          <p style="color:rgba(255,255,255,.6);font-size:.9rem;margin:0;">Chiropractic care restores joint function. Strength and movement training keeps it there. Both happen here.</p>
         </div>
       </div>
     </div>
