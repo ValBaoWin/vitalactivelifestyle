@@ -1063,7 +1063,49 @@
 
           <p class="form-note">Your information is kept private and never shared. By submitting you agree to be contacted by VAL Chiropractic regarding your inquiry.</p>
 
+          <div id="form-status" role="alert" aria-live="polite" style="display:none;margin-top:1rem;padding:1rem 1.25rem;border-radius:8px;font-weight:600;"></div>
+
         </form>
+
+        <script>
+          (function(){
+            var form = document.getElementById('contact-form');
+            if(!form) return;
+            form.addEventListener('submit', function(e){
+              e.preventDefault();
+              var btn = form.querySelector('button[type="submit"]');
+              var status = document.getElementById('form-status');
+              btn.disabled = true;
+              btn.textContent = 'Sending…';
+              fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              }).then(function(res){
+                if(res.ok){
+                  status.textContent = 'Message sent! We\'ll be in touch shortly.';
+                  status.style.display = 'block';
+                  status.style.background = '#d1fae5';
+                  status.style.color = '#065f46';
+                  form.reset();
+                  btn.textContent = 'Send Message';
+                  btn.disabled = false;
+                } else {
+                  return res.json().then(function(data){
+                    throw new Error(data.error || 'Submission failed');
+                  });
+                }
+              }).catch(function(err){
+                status.textContent = 'Something went wrong. Please call us at (408) 422-5672.';
+                status.style.display = 'block';
+                status.style.background = '#fee2e2';
+                status.style.color = '#991b1b';
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+              });
+            });
+          })();
+        </script>
 
       </div><!-- /contact-grid -->
     </div>
