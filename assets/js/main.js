@@ -109,6 +109,20 @@
   if (ce) ce.innerHTML = mailTag;
   if (fe) fe.innerHTML = mailTag;
 
+  /* ── Floating contact menu ─────────────────────────────── */
+  if (!document.querySelector('.contact-fab')) {
+    var contactFab = document.createElement('details');
+    contactFab.className = 'contact-fab';
+    contactFab.innerHTML =
+      '<summary aria-label="Open contact options"><span class="contact-fab-dot" aria-hidden="true"></span>Connect Now</summary>' +
+      '<div class="contact-fab-menu" aria-label="Contact VAL Chiropractic">' +
+        '<a href="tel:+14085321139"><strong>Call</strong><span>(408) 532-1139</span></a>' +
+        '<a href="sms:+14085321139"><strong>Text</strong><span>Send a message</span></a>' +
+        '<a href="mailto:' + addr + '"><strong>Email</strong><span>' + addr + '</span></a>' +
+      '</div>';
+    document.body.appendChild(contactFab);
+  }
+
   /* ── Copyright year ─────────────────────────────────────── */
   var yr = document.getElementById('copyright-year');
   if (yr) yr.textContent = new Date().getFullYear();
