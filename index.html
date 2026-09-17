@@ -9,7 +9,7 @@
     5. Drop hero + doctor photos into /images/ and uncomment <img> tags
     6. Replace Google/Yelp review URLs (search "TODO: Replace #")
     7. Create sitemap.xml and robots.txt in repo root
-    8. Set OG image: <meta property="og:image" content="https://valbaowin.github.io/vitalactivelifestyle/images/og-image.jpg">
+    8. Set OG image: <meta property="og:image" content="https://valchiropractic.com/images/og-image.jpg">
     9. Confirm ZIP code (likely 95148) — search "95148"
    10. Verify lien/insurance copy with Dr. Nguyen — search "TODO: Confirm lien"
    SEO tags, JSON-LD schema, and full CSS are added in Stages 2 & 3.
@@ -24,15 +24,15 @@
        TODO: Create sitemap.xml + robots.txt in repo root
   ════════════════════════════════════════════════════════════ -->
 
-  <title>San Jose Chiropractor | Car Accidents, Sports Injuries & Pain Relief | VAL Chiropractic</title>
+  <title>Sports, Injury &amp; Movement Chiropractor in San Jose | VAL Chiropractic</title>
 
   <!-- Primary meta ──────────────────────────────────────────── -->
-  <meta name="description" content="San Jose chiropractor Dr. Lam Nguyen treats car accident injuries, neck &amp; back pain, sports injuries, sciatica, and posture problems. ART &amp; Graston certified. Call (408) 532-1139.">
+  <meta name="description" content="Move better with San Jose chiropractor Dr. Lam Nguyen. Chiropractic care, ART, Graston, movement assessment, and corrective exercise for active adults, desk workers, and injury recovery.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="VAL Chiropractic">
 
   <!-- Canonical ─────────────────────────────────────────────── -->
-  <link rel="canonical" href="https://valbaowin.github.io/vitalactivelifestyle/">
+  <link rel="canonical" href="https://valchiropractic.com/">
 
   <!-- Geo meta ──────────────────────────────────────────────── -->
   <!-- TODO: Verify coordinates for 3239 S White Rd, San Jose, CA (approx. Evergreen area) -->
@@ -44,11 +44,11 @@
   <!-- Open Graph ────────────────────────────────────────────── -->
   <meta property="og:type"        content="business.business">
   <meta property="og:site_name"   content="VAL Chiropractic">
-  <meta property="og:title"       content="San Jose Chiropractor | Car Accidents, Sports Injuries & Pain Relief | VAL Chiropractic">
-  <meta property="og:description" content="San Jose chiropractor Dr. Lam Nguyen treats car accident injuries, neck &amp; back pain, sports injuries, sciatica, and posture problems. ART &amp; Graston certified. Call (408) 532-1139.">
-  <meta property="og:url"         content="https://valbaowin.github.io/vitalactivelifestyle/">
+  <meta property="og:title"       content="Sports, Injury &amp; Movement Chiropractor in San Jose | VAL Chiropractic">
+  <meta property="og:description" content="More than an adjustment: chiropractic care, soft-tissue therapy, movement assessment, and corrective exercise in San Jose.">
+  <meta property="og:url"         content="https://valchiropractic.com/">
   <!-- TODO: Replace path with real OG image (1200×630px recommended) -->
-  <meta property="og:image"       content="https://valbaowin.github.io/vitalactivelifestyle/images/og-image.jpg">
+  <meta property="og:image"       content="https://valchiropractic.com/assets/images/office-hallway-final.jpg">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt"   content="VAL Chiropractic clinic in San Jose, CA — Dr. Lam Nguyen, D.C.">
@@ -64,7 +64,7 @@
   <meta name="twitter:title"       content="Chiropractor in San Jose, CA | VAL Chiropractic">
   <meta name="twitter:description" content="Personal injury &amp; auto accident chiropractic care in San Jose, CA. Dr. Lam Nguyen, D.C. Same-day appointments available.">
   <!-- TODO: Replace with real OG image path -->
-  <meta name="twitter:image"       content="https://valbaowin.github.io/vitalactivelifestyle/images/og-image.jpg">
+  <meta name="twitter:image"       content="https://valchiropractic.com/assets/images/office-hallway-final.jpg">
   <meta name="twitter:image:alt"   content="VAL Chiropractic — San Jose, CA chiropractor">
 
   <!-- JSON-LD Structured Data ───────────────────────────────── -->
@@ -73,14 +73,24 @@
     "@context": "https://schema.org",
     "@type": "Chiropractor",
     "name": "VAL Chiropractic",
-    "url": "https://valbaowin.github.io/vitalactivelifestyle/",
-    "@id": "https://valbaowin.github.io/vitalactivelifestyle/#business",
+    "url": "https://valchiropractic.com/",
+    "@id": "https://valchiropractic.com/#business",
     "description": "Family chiropractic clinic in San Jose, CA specializing in personal injury, auto accident recovery, lower back pain, neck pain, Lower Cross Syndrome, shoulder, knee, and hip injuries.",
-    "image": "https://valbaowin.github.io/vitalactivelifestyle/images/og-image.jpg",
-    "logo": "https://valbaowin.github.io/vitalactivelifestyle/images/logo.png",
+    "image": "https://valchiropractic.com/assets/images/office-hallway-final.jpg",
     "telephone": "+14085321139",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+14085321139",
+      "contactType": "appointments",
+      "availableLanguage": ["English", "Spanish", "Vietnamese", "Tagalog"]
+    },
     "email": "lamnguyendc@gmail.com",
     "priceRange": "$$",
+    "amenityFeature": {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free on-site parking",
+      "value": true
+    },
     "currenciesAccepted": "USD",
     "paymentAccepted": "Cash, Credit Card, Insurance, Lien",
     "address": {
@@ -91,10 +101,23 @@
       "postalCode": "95148",
       "addressCountry": "US"
     },
+    "location": [
+      {
+        "@type": "Place",
+        "name": "VAL Chiropractic — S White Road Office",
+        "address": {"@type":"PostalAddress","streetAddress":"3239 S White Road","addressLocality":"San Jose","addressRegion":"CA","postalCode":"95148","addressCountry":"US"}
+      },
+      {
+        "@type": "Place",
+        "name": "VAL Chiropractic — Willow Glen Office",
+        "address": {"@type":"PostalAddress","streetAddress":"2099 Lincoln Avenue, Suite 101","addressLocality":"San Jose","addressRegion":"CA","postalCode":"95125","addressCountry":"US"},
+        "hasMap": "https://maps.google.com/?q=2099+Lincoln+Ave+Suite+101,+San+Jose,+CA+95125"
+      }
+    ],
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "37.3091",
-      "longitude": "-121.7943"
+      "latitude": "37.3155386",
+      "longitude": "-121.7934922"
     },
     "hasMap": "https://maps.google.com/?q=3239+S+White+Rd,+San+Jose,+CA+95148",
     "areaServed": [
@@ -106,18 +129,10 @@
       {"@type": "City", "name": "Silver Creek"}
     ],
     "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Wednesday", "Thursday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Friday"],
-        "opens": "09:00",
-        "closes": "15:00"
-      }
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday"],"opens":"09:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday"],"opens":"15:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"14:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"09:00","closes":"15:00"}
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -134,6 +149,18 @@
       "@type": "OfferCatalog",
       "name": "Chiropractic Services at VAL Chiropractic",
       "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Free Motor Vehicle Accident and Personal Injury Consultation",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://valchiropractic.com/free-accident-consultation-san-jose/",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Motor Vehicle Accident and Personal Injury Consultation",
+            "description": "A free, no-obligation consultation for all motor vehicle accident and personal injury cases."
+          }
+        },
         {
           "@type": "Offer",
           "itemOffered": {
@@ -206,15 +233,81 @@
     },
     "employee": {
       "@type": "Physician",
-      "@id": "https://valbaowin.github.io/vitalactivelifestyle/#doctor",
+      "@id": "https://valchiropractic.com/#doctor",
       "name": "Dr. Lam Nguyen",
       "jobTitle": "Doctor of Chiropractic",
       "medicalSpecialty": "Chiropractic",
-      "worksFor": { "@id": "https://valbaowin.github.io/vitalactivelifestyle/#business" }
+      "worksFor": { "@id": "https://valchiropractic.com/#business" }
     },
     "sameAs": [
       "https://www.google.com/maps/search/VAL+Chiropractic+3239+S+White+Rd+San+Jose+CA+95148",
-      "https://www.yelp.com/biz/val-chiropractic-san-jose-2"
+      "https://www.yelp.com/biz/val-chiropractic-san-jose-2",
+      "https://www.instagram.com/valchiropractic/"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does VAL Chiropractic offer a free consultation for motor vehicle accident and personal injury cases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. VAL Chiropractic offers a free, no-obligation consultation for all motor vehicle accident and personal injury cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes VAL Chiropractic different from a typical chiropractic office?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VAL Chiropractic combines chiropractic care, soft-tissue therapy, movement assessment, mobility work, and corrective strengthening in individualized care plans. The goal is to address factors contributing to symptoms, restore mobility first, and then build strength for a safer return to activity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does VAL Chiropractic treat sports and exercise injuries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. VAL Chiropractic evaluates and treats many sports and exercise-related conditions involving the back, neck, shoulder, hip, knee, and ankle. Care may include joint treatment, soft-tissue therapy, mobility work, and corrective exercise based on the patient's evaluation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does VAL Chiropractic offer Active Release Technique and Graston Technique?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Dr. Lam Nguyen is an Active Release Technique certified provider and a Graston Technique certified provider. These soft-tissue methods may be included when appropriate for the patient's condition and care plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are anterior pelvic tilt and lower cross syndrome?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anterior pelvic tilt and lower cross syndrome describe related posture and muscle patterns that may involve restricted hip flexors, lower-back tension, and reduced abdominal or gluteal contribution. An evaluation is needed to determine whether these factors are contributing to a person's symptoms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are upper cross syndrome and tech neck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Upper cross syndrome and tech neck describe patterns commonly associated with forward-head posture, rounded shoulders, neck stiffness, headaches, and upper-back tension. Care may include mobility work, soft-tissue treatment, ergonomic guidance, and progressive strengthening based on an evaluation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are VAL Chiropractic's San Jose offices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VAL Chiropractic has two San Jose locations: 3239 S White Road, San Jose, CA 95148, and a Willow Glen office at 2099 Lincoln Avenue, Suite 101, San Jose, CA 95125. Call to schedule at the appropriate location."
+        }
+      }
     ]
   }
   </script>
@@ -246,7 +339,7 @@
 
     <nav id="primary-nav" aria-label="Primary navigation">
       <ul role="list">
-        <li><a href="#personal-injury">Personal Injury</a></li>
+        <li><a href="#care-paths">Start Here</a></li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
           <ul class="nav-dropdown-menu" role="list">
@@ -277,7 +370,7 @@
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
         <span>(408) 532-1139</span>
       </a>
-      <a href="#contact" class="btn btn-primary">Book Appointment</a>
+      <a href="#contact" class="btn btn-accent">Request Appointment</a>
     </div>
 
     <button
@@ -298,7 +391,7 @@
     aria-label="Mobile navigation"
     aria-hidden="true">
     <ul role="list">
-      <li><a href="#personal-injury">Personal Injury</a></li>
+      <li><a href="#care-paths">Start Here</a></li>
       <li><a href="personal-injury-chiropractor-san-jose/">Personal Injury Page</a></li>
       <li><a href="car-accident-chiropractor-san-jose/">Car Accident</a></li>
       <li><a href="whiplash-treatment-san-jose/">Whiplash</a></li>
@@ -318,7 +411,7 @@
     </ul>
     <div class="mobile-nav-ctas">
       <a href="tel:+14085321139" class="btn btn-primary">Call (408) 532-1139</a>
-      <a href="#contact" class="btn btn-outline">Book Appointment</a>
+      <a href="sms:+14085321139" class="btn btn-outline">Text Us</a>
     </div>
   </nav>
 </header>
@@ -346,20 +439,25 @@
     <div class="container hero-content">
       <div class="hero-text">
 
-        <h1 id="hero-heading">
-          San Jose Chiropractor for Pain Relief, Injury Recovery &amp; Sports Performance
-        </h1>
+        <div class="hero-kicker">Sports, Injury &amp; Movement Chiropractic in San Jose</div>
+        <h1 id="hero-heading">Treat the Cause. Restore Movement. Build Strength.</h1>
 
         <p class="hero-subhead">
-          Dr. Lam Nguyen, D.C. focuses on the root cause of your pain — not just the symptoms. Through chiropractic care, mobility and strengthening work, and proper movement training, he helps patients across San Jose recover fully and stay that way.
+          More than an adjustment. Dr. Lam Nguyen combines chiropractic care, Active Release Technique, Graston, movement assessment, and corrective exercise to address what may be contributing to your pain—and help you move with confidence.
         </p>
+
+        <a class="accident-offer" href="free-accident-consultation-san-jose/" aria-label="Learn about the free consultation for motor vehicle accident and personal injury cases">
+          <strong>Free Consultation</strong>
+          <span>For all motor vehicle accident and personal injury cases</span>
+        </a>
 
         <div class="hero-ctas">
           <a href="tel:+14085321139" class="btn btn-primary btn-lg">
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
-            Call Now
+            Call (408) 532-1139
           </a>
-          <a href="#contact" class="btn btn-secondary btn-lg">Book Appointment</a>
+          <a href="#contact" class="btn btn-accent btn-lg">Request Appointment</a>
+          <a href="sms:+14085321139" class="btn btn-text btn-lg">Text the Clinic</a>
         </div>
 
         <!-- Trust strip -->
@@ -373,12 +471,12 @@
             <span>Yelp Rating · 136 Reviews</span>
           </li>
           <li class="trust-item">
-            <strong>Lien-Based</strong>
-            <span>Auto Accident Care</span>
+            <strong>ART &amp; Graston</strong>
+            <span>Soft-Tissue Care</span>
           </li>
           <li class="trust-item">
-            <strong>Family</strong>
-            <span>Chiropractic Clinic</span>
+            <strong>On-Site Gym</strong>
+            <span>Corrective Exercise</span>
           </li>
         </ul>
 
@@ -386,81 +484,193 @@
     </div>
   </section>
 
+  <section id="quick-proof" aria-label="Patient feedback and credentials">
+    <div class="container quick-proof-grid">
+      <blockquote>“Super informative and great at explaining what is going on—and what to do outside appointments.” <cite>— Verified patient</cite></blockquote>
+      <blockquote>“He has helped me improve my posture and with sports injuries. Especially great if you’re an athlete.” <cite>— Verified patient</cite></blockquote>
+      <div class="proof-credentials"><strong>20+ years of experience</strong><span>CCSP · ART Certified · Graston Certified</span><a href="#reviews">Read patient reviews →</a></div>
+    </div>
+  </section>
+
+  <section id="symptom-selector" aria-labelledby="symptom-heading">
+    <div class="container">
+      <div class="section-label">Find Your Starting Point</div>
+      <h2 id="symptom-heading">What’s bothering you?</h2>
+      <p class="section-subhead">Choose the concern that sounds most like yours to explore the most relevant care information.</p>
+      <div class="symptom-grid">
+        <a href="neck-pain-treatment-san-jose/"><span aria-hidden="true">01</span><strong>Neck Pain</strong><small>Stiffness, limited motion, headaches, or discomfort from desk work</small></a>
+        <a href="lower-back-pain-treatment-san-jose/"><span aria-hidden="true">02</span><strong>Back Pain</strong><small>Recurring aches, lifting-related pain, or difficulty sitting and moving</small></a>
+        <a href="#conditions"><span aria-hidden="true">03</span><strong>Shoulder or Hip Pain</strong><small>Mobility restrictions, discomfort with exercise, or everyday movement limits</small></a>
+        <a href="sports-injury-chiropractor-san-jose/"><span aria-hidden="true">04</span><strong>Sports Injury</strong><small>Return to training with movement assessment and progressive rehabilitation</small></a>
+        <a href="ergonomics-san-jose/"><span aria-hidden="true">05</span><strong>Desk &amp; Posture Pain</strong><small>Neck, shoulder, wrist, hip, or back symptoms linked to long workdays</small></a>
+        <a href="car-accident-chiropractor-san-jose/"><span aria-hidden="true">06</span><strong>Car Accident</strong><small>Evaluation and organized documentation for collision-related symptoms</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="posture-patterns" aria-labelledby="posture-patterns-heading">
+    <div class="container">
+      <div class="section-label">Posture &amp; Movement Patterns</div>
+      <h2 id="posture-patterns-heading">Pelvic tilt, lower cross syndrome, upper cross syndrome &amp; tech neck</h2>
+      <p class="section-subhead">These common patterns can be associated with stiffness, muscle imbalance, limited mobility, and recurring discomfort. A proper evaluation helps determine what is actually contributing to your symptoms.</p>
+      <div class="posture-pattern-grid">
+        <article>
+          <p class="path-eyebrow">Hips, pelvis &amp; lower back</p>
+          <h3>Anterior Pelvic Tilt &amp; Lower Cross Syndrome</h3>
+          <p>This pattern may involve restricted hip flexors, increased tension through the lower back, and reduced contribution from the abdominal and gluteal muscles. Dr. Nguyen evaluates pelvic position, hip mobility, core control, and movement mechanics before recommending care.</p>
+          <a href="lower-cross-syndrome-san-jose/">Explore lower cross syndrome care →</a>
+        </article>
+        <article>
+          <p class="path-eyebrow">Neck, shoulders &amp; upper back</p>
+          <h3>Upper Cross Syndrome &amp; Tech Neck</h3>
+          <p>Long hours at a computer or phone may contribute to forward-head posture, rounded shoulders, neck stiffness, headaches, and upper-back tension. Care may combine mobility work, soft-tissue treatment, workstation guidance, and progressive strengthening.</p>
+          <div class="posture-links"><a href="upper-cross-syndrome-san-jose/">Explore upper cross syndrome →</a><a href="posture-correction-san-jose/">Explore posture correction →</a></div>
+        </article>
+      </div>
+      <p class="pattern-note">Posture varies from person to person. These labels describe movement and muscle patterns—not a diagnosis based on appearance alone.</p>
+    </div>
+  </section>
+
+  <section id="approach" aria-labelledby="approach-heading">
+    <div class="container">
+      <div class="section-label">More Than Chiropractic Adjustments</div>
+      <h2 id="approach-heading">A complete approach to moving and feeling better</h2>
+      <p class="section-subhead">Your care can combine hands-on treatment with movement and strength work based on what Dr. Nguyen finds during your evaluation.</p>
+      <div class="approach-grid">
+        <article><span>01</span><h3>Joint Care</h3><p>Targeted chiropractic care to support mobility and comfortable movement.</p></article>
+        <article><span>02</span><h3>Soft Tissue</h3><p>ART and Graston techniques for muscles and other soft tissues involved in your symptoms.</p></article>
+        <article><span>03</span><h3>Movement Assessment</h3><p>Posture, mobility, and movement patterns evaluated in the context of your daily life or sport.</p></article>
+        <article><span>04</span><h3>Strength &amp; Rehab</h3><p>Supervised corrective exercise in a fully equipped on-site rehabilitation gym.</p></article>
+      </div>
+
+      <div class="care-principles" aria-label="VAL Chiropractic care priorities">
+        <div class="principle-heading">
+          <span>Our Care Priorities</span>
+          <h3>Mobility First.<br>Strength Second.</h3>
+        </div>
+        <div class="principle-copy">
+          <p>Our first goal is to restore comfortable, functional mobility. Once you can move through an appropriate range of motion, we build the strength and stability needed to support it.</p>
+          <p>Strengthening a restricted movement pattern may reinforce compensations and place unnecessary stress on other areas of the body. That’s why we improve movement quality first, then progressively strengthen it.</p>
+        </div>
+        <aside class="cause-callout">
+          <strong>Treat the cause, not just the symptoms.</strong>
+          <p>We look beyond where it hurts to identify the joint, soft-tissue, posture, and movement factors that may be contributing to the problem.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="movement-in-practice" aria-labelledby="movement-heading">
+    <div class="container">
+      <div class="section-label">Movement in Practice</div>
+      <h2 id="movement-heading">Assessment, rehabilitation, and community education</h2>
+      <p class="section-subhead">A closer look at how VAL Chiropractic connects hands-on care with movement, strength, and practical education.</p>
+      <div class="practice-gallery">
+        <figure class="practice-feature">
+          <img src="assets/images/instagram-rehab-side-plank.jpg" alt="Patient performing a supported side plank in the VAL Chiropractic rehabilitation gym" loading="lazy" width="1440" height="1080">
+          <figcaption><strong>Progressive rehabilitation</strong><span>Building stability and strength around each patient’s current ability.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/instagram-movement-assessment.jpg" alt="Patient performing a squat during a movement assessment at VAL Chiropractic" loading="lazy" width="1440" height="1800">
+          <figcaption><strong>Movement assessment</strong><span>Looking beyond the painful area to identify patterns that may be contributing.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/instagram-community-wellness.jpg" alt="Workplace wellness presentation attended by local workers in San Jose" loading="lazy" width="1440" height="1080">
+          <figcaption><strong>Community wellness</strong><span>Sharing practical movement and injury-prevention education beyond the clinic.</span></figcaption>
+        </figure>
+        <figure class="practice-quote">
+          <img src="assets/images/instagram-treatment-philosophy.jpg" alt="Dr. Nguyen's treatment philosophy highlighting chiropractic adjustments, Active Release Technique, Graston Technique, diagnosis, and experience" loading="lazy" width="1440" height="1777">
+          <figcaption><strong>Experience guides the tools</strong><span>Adjustments, ART, and Graston are selected after understanding the why and how of the problem.</span></figcaption>
+        </figure>
+      </div>
+      <p class="photo-release-note">Preview note: confirm that patient photo releases permit website marketing before publication.</p>
+    </div>
+  </section>
+
+  <section id="right-fit" aria-labelledby="right-fit-heading">
+    <div class="container right-fit-grid">
+      <div class="right-fit-intro">
+        <div class="section-label">Is This Right for Me?</div>
+        <h2 id="right-fit-heading">A practical approach for people who want to stay active</h2>
+        <p>VAL Chiropractic may be a good fit if you want more than a quick adjustment and value understanding how joints, soft tissue, movement, and strength work together.</p>
+        <a href="#contact" class="btn btn-primary">Ask About Your Situation</a>
+      </div>
+      <div class="fit-panels">
+        <article class="fit-panel fit-panel-positive">
+          <h3>This approach may fit you if:</h3>
+          <ul>
+            <li>You want a clear explanation of what may be contributing to your symptoms.</li>
+            <li>You are open to mobility or strengthening work alongside hands-on care.</li>
+            <li>You want to return to sports, work, training, or normal daily activity.</li>
+            <li>You prefer an individualized plan rather than the same routine every visit.</li>
+          </ul>
+        </article>
+        <article class="fit-panel fit-panel-referral">
+          <h3>When another provider may be appropriate</h3>
+          <p>If your evaluation suggests imaging, medication management, emergency care, or specialist treatment is needed, Dr. Nguyen can explain the findings and recommend the appropriate next step. Care begins only when it is suitable for your situation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="care-paths" aria-labelledby="care-paths-heading">
+    <div class="container">
+      <div class="section-label">Choose Your Path</div>
+      <h2 id="care-paths-heading">Care built around how you live</h2>
+      <div class="care-path-grid">
+        <article><p class="path-eyebrow">Active adults &amp; athletes</p><h3>Sports &amp; Performance</h3><p>Address pain, mobility limits, and movement patterns so you can return to training and the activities you enjoy.</p><a href="sports-injury-chiropractor-san-jose/">Explore sports injury care →</a></article>
+        <article><p class="path-eyebrow">Desk &amp; posture patients</p><h3>Neck, Back &amp; Posture</h3><p>Practical care for stiffness, recurring discomfort, and the demands of long hours at a desk.</p><a href="ergonomics-san-jose/">Explore desk and posture care →</a></article>
+        <article><p class="path-eyebrow">After a collision</p><h3>Car Accident Recovery</h3><p>A distinct care path for whiplash and collision-related injuries, with organized clinical documentation.</p><a href="car-accident-chiropractor-san-jose/">Explore accident care →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quick-answers" aria-labelledby="quick-answers-heading">
+    <div class="container">
+      <div class="section-label">Quick Answers</div>
+      <h2 id="quick-answers-heading">What patients often want to know</h2>
+      <p class="section-subhead">Clear answers about VAL Chiropractic's approach, services, and San Jose location.</p>
+      <div class="quick-answer-grid">
+        <article>
+          <h3>What makes VAL Chiropractic different?</h3>
+          <p>Care can combine chiropractic treatment, soft-tissue therapy, movement assessment, mobility work, and corrective strengthening. The goal is to address contributing factors—not only symptoms—by restoring mobility first and then building strength.</p>
+        </article>
+        <article>
+          <h3>Do you treat sports and exercise injuries?</h3>
+          <p>Yes. Dr. Lam Nguyen evaluates many sports and exercise-related conditions involving the back, neck, shoulder, hip, knee, and ankle, then builds an individualized plan around the findings and your activity goals.</p>
+        </article>
+        <article>
+          <h3>Do you offer ART and Graston Technique?</h3>
+          <p>Yes. Dr. Nguyen is certified in Active Release Technique (ART) and the Graston Technique. These soft-tissue methods may be included when appropriate for your condition and care plan.</p>
+        </article>
+        <article>
+          <h3>Where are the offices?</h3>
+          <p>VAL Chiropractic has offices on S White Road and in Willow Glen at 2099 Lincoln Avenue, Suite 101. Call to schedule at the location that works for you.</p>
+          <a href="#location">See location and hours →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ==========================================================
-       PERSONAL INJURY & AUTO ACCIDENT
+       FREE ACCIDENT CONSULTATION
   ========================================================== -->
   <section id="personal-injury" aria-labelledby="pi-heading">
     <div class="container">
-
-      <div class="section-label">Personal Injury &amp; Auto Accident Care</div>
-      <h2 id="pi-heading">Injured in a Car Accident? We Can Help.</h2>
-      <p class="section-subhead">
-        Whiplash, back pain, and soft-tissue injuries often don't surface until hours or days after a collision. Early chiropractic care both speeds your recovery and protects your legal claim. VAL Chiropractic specializes in accident-related injuries and coordinates with your attorney so you can focus on healing.
-      </p>
-
-      <div class="pi-cards">
-
-        <article class="pi-card">
-          <div class="pi-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l2-5h14l2 5"/><rect x="1" y="9" width="22" height="8" rx="2"/>
-              <circle cx="6.5" cy="17" r="2"/><circle cx="17.5" cy="17" r="2"/>
-              <path d="M1 13h2m18 0h2"/>
-            </svg>
-          </div>
-          <h3>We Work on Lien</h3>
-          <p>No upfront costs for personal injury patients. We bill on lien — meaning your care is paid from your settlement.
-            <!-- TODO: Confirm lien policy and accepted insurance types with Dr. Nguyen -->
-          </p>
-        </article>
-
-        <article class="pi-card">
-          <div class="pi-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-            </svg>
-          </div>
-          <h3>Detailed Injury Reports</h3>
-          <p>We produce thorough medical documentation — diagnosis, treatment, and progress records — that your attorney needs to build a strong personal injury claim.</p>
-        </article>
-
-        <article class="pi-card">
-          <div class="pi-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Auto Insurance Accepted</h3>
-          <p>Your MedPay or PIP coverage may pay for chiropractic care with zero out-of-pocket cost. We verify your benefits and coordinate directly with your insurer.
-            <!-- TODO: Confirm specific insurance plans accepted -->
-          </p>
-        </article>
-
-        <article class="pi-card">
-          <div class="pi-icon" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3>Same-Day Appointments</h3>
-          <p>Documenting injuries quickly strengthens your case. We offer same-day and next-day appointments for accident victims — call within 72 hours of your accident.</p>
-        </article>
-
-      </div><!-- /pi-cards -->
-
-      <div class="pi-steps-box">
-        <h3>What to Do After a Car Accident</h3>
-        <ol class="pi-steps">
-          <li><strong>Get checked medically</strong> — even if you feel fine, internal and soft-tissue injuries may not be apparent right away.</li>
-          <li><strong>Document everything</strong> — photos of the scene, vehicles, and any visible injuries.</li>
-          <li><strong>Report to your insurance</strong> — notify your insurer promptly.</li>
-          <li><strong>Call VAL Chiropractic</strong> — we'll evaluate your injuries, start your recovery plan, and generate the records your attorney needs.</li>
-        </ol>
-        <a href="tel:+14085321139" class="btn btn-primary">Call for Accident Care: (408) 532-1139</a>
+      <div class="section-label">Motor Vehicle Accident &amp; Personal Injury</div>
+      <h2 id="pi-heading">Start With a Free, No-Obligation Consultation</h2>
+      <p class="section-subhead">If you were injured in a collision or another personal injury incident, start with a conversation. Tell us what happened, ask questions, and learn whether an in-person evaluation may be appropriate.</p>
+      <div class="pi-free-consult">
+        <div>
+          <span class="offer-eyebrow">Available for all accident and personal injury cases</span>
+          <h3>Understand Your Options Before Beginning Care</h3>
+          <p>The consultation is free and does not require you to schedule treatment. Examination and treatment, if recommended, are separate and explained before care begins.</p>
+        </div>
+        <div class="consult-actions">
+          <a href="free-accident-consultation-san-jose/" class="btn btn-accent">Learn About the Free Consultation</a>
+          <a href="tel:+14085321139" class="btn btn-secondary">Call (408) 532-1139</a>
+        </div>
       </div>
-
     </div>
   </section>
 
@@ -625,7 +835,7 @@
 
           <p>Dr. Lam Nguyen founded VAL Chiropractic with a clear mission: deliver honest, effective chiropractic care that makes a genuine difference in patients' lives. A San Jose community member, Dr. Nguyen graduated from Life Chiropractic College West in 2004 and has been serving the Evergreen and East San Jose communities ever since — opening VAL Chiropractic in 2010.</p>
 
-          <p>With over 20 years of clinical experience, Dr. Nguyen specializes in soft-tissue injuries, sports rehabilitation, and auto accident recovery. He is certified in Active Release Technique (ART) and the Graston Technique — advanced manual therapies that address the root cause of pain rather than just the symptoms. He also serves as a Qualified Medical Examiner (QME), providing independent medical evaluations for personal injury cases.</p>
+          <p>With over 20 years of clinical experience, Dr. Nguyen focuses on soft-tissue injuries, sports rehabilitation, and auto accident recovery. He is certified in Active Release Technique (ART) and the Graston Technique—manual therapies used as part of an individualized plan. He is also a California Qualified Medical Examiner (QME) in the workers’ compensation system.</p>
 
           <p>Dr. Nguyen's philosophy is simple: pain is a signal, not a sentence. Whether you're a competitive athlete, a desk worker, or recovering from a car accident, his goal is to relieve your pain, help you understand why it happened, and give you the tools to keep it from returning.</p>
 
@@ -648,7 +858,7 @@
             </li>
             <li>
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Qualified Medical Examiner (QME) — State of California
+              Qualified Medical Examiner (QME) — California Workers’ Compensation
             </li>
             <li>
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -668,7 +878,7 @@
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Graston Certified
             </span>
             <span class="cred-badge" style="display:inline-flex;align-items:center;gap:.5rem;background:#f0fdf4;border:1.5px solid #2d7a4f;border-radius:6px;padding:.4rem .85rem;font-size:.82rem;font-weight:600;color:#1a4731;">
-              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>QME — California
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>QME — Workers’ Compensation
             </span>
           </div>
         </div>
@@ -953,7 +1163,7 @@
     <div class="container">
 
       <div class="section-label">Find Us</div>
-      <h2 id="location-heading">Location &amp; Hours</h2>
+      <h2 id="location-heading">Two San Jose Locations</h2>
 
       <div class="location-grid">
 
@@ -982,7 +1192,7 @@
           <div class="info-block">
             <h3>
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Address
+              S White Road Office
             </h3>
             <address>
               VAL Chiropractic<br>
@@ -1001,13 +1211,13 @@
           <div class="info-block">
             <h3>
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Office Hours
+              S White Road Office Hours
             </h3>
             <dl class="hours-list">
-              <div class="hours-row"><dt>Monday</dt><dd>9:00 AM – 6:00 PM</dd></div>
-              <div class="hours-row"><dt>Tuesday</dt><dd>9:00 AM – 3:00 PM</dd></div>
-              <div class="hours-row"><dt>Wednesday</dt><dd>9:00 AM – 6:00 PM</dd></div>
-              <div class="hours-row"><dt>Thursday</dt><dd>9:00 AM – 6:00 PM</dd></div>
+              <div class="hours-row"><dt>Monday</dt><dd>9:00 AM – 2:00 PM<br>3:00 PM – 6:00 PM</dd></div>
+              <div class="hours-row"><dt>Tuesday</dt><dd>9:00 AM – 2:00 PM</dd></div>
+              <div class="hours-row"><dt>Wednesday</dt><dd>9:00 AM – 2:00 PM<br>3:00 PM – 6:00 PM</dd></div>
+              <div class="hours-row"><dt>Thursday</dt><dd>9:00 AM – 2:00 PM<br>3:00 PM – 6:00 PM</dd></div>
               <div class="hours-row"><dt>Friday</dt><dd>9:00 AM – 3:00 PM</dd></div>
               <div class="hours-row"><dt>Saturday</dt><dd>Closed</dd></div>
               <div class="hours-row"><dt>Sunday</dt><dd>Closed</dd></div>
@@ -1028,6 +1238,19 @@
 
         </div><!-- /location-info -->
       </div><!-- /location-grid -->
+
+      <div class="second-location-card">
+        <div>
+          <div class="section-label">Willow Glen Office</div>
+          <h3>2099 Lincoln Avenue, Suite 101</h3>
+          <p>San Jose, CA 95125</p>
+          <p class="location-scheduling-note">Call to confirm availability and schedule your visit at this location.</p>
+        </div>
+        <div class="second-location-actions">
+          <a href="https://maps.google.com/?q=2099+Lincoln+Ave+Suite+101,+San+Jose,+CA+95125" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Get Directions</a>
+          <a href="tel:+14085321139" class="btn btn-accent">Call (408) 532-1139</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1060,7 +1283,11 @@
             </li>
             <li>
               <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <address>3239 S White Road, San Jose, CA 95148</address>
+              <address>3239 S White Road, San Jose, CA 95148<br>2099 Lincoln Avenue, Suite 101, San Jose, CA 95125</address>
+            </li>
+            <li>
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+              <span><strong>Languages:</strong> English, Español, Tiếng Việt &amp; Tagalog</span>
             </li>
           </ul>
 
@@ -1128,7 +1355,7 @@
             <textarea id="f-message" name="message" rows="4" placeholder="Tell us about your pain or injury, how it started, and the best time to reach you."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <button type="submit" class="btn btn-accent btn-full">Send Message</button>
 
           <p class="form-note">Your information is kept private and never shared. By submitting you agree to be contacted by VAL Chiropractic regarding your inquiry.</p>
 
@@ -1240,16 +1467,19 @@
       <h4>Contact</h4>
       <address>
         3239 S White Road<br>
-        San Jose, CA 95148
+        San Jose, CA 95148<br><br>
+        2099 Lincoln Avenue, Suite 101<br>
+        San Jose, CA 95125
       </address>
       <p><a href="tel:+14085321139">(408) 532-1139</a></p>
       <p id="footer-email-link"><!-- injected by JS --></p>
-      <h4 style="margin-top:1.25rem;">Hours</h4>
+      <h4 style="margin-top:1.25rem;">S White Road Hours</h4>
       <p class="footer-hours">
-        Mon / Wed / Thu: 9:00 AM – 6:00 PM<br>
-        Tue / Fri: 9:00 AM – 3:00 PM<br>
+        Mon / Wed / Thu: 9:00 AM – 2:00 PM, 3:00 PM – 6:00 PM<br>
+        Tue: 9:00 AM – 2:00 PM · Fri: 9:00 AM – 3:00 PM<br>
         Sat – Sun: Closed
       </p>
+      <small>Call for Willow Glen availability.</small>
     </div>
 
     <div class="footer-col">
@@ -1266,7 +1496,7 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <p>&copy; <span id="copyright-year"></span> VAL Chiropractic. All rights reserved. · 3239 S White Road, San Jose, CA 95148</p>
+      <p>&copy; <span id="copyright-year"></span> VAL Chiropractic. All rights reserved. · Two San Jose locations</p>
     </div>
   </div>
 </footer>
@@ -1279,7 +1509,7 @@
     <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
     Call Now
   </a>
-  <a href="#contact" class="mobile-book-btn">Book Appointment</a>
+  <a href="#contact" class="mobile-book-btn">Request Appointment</a>
 </div>
 
 <script src="assets/js/main.js"></script>
