@@ -339,26 +339,40 @@
 
     <nav id="primary-nav" aria-label="Primary navigation">
       <ul role="list">
-        <li><a href="#care-paths">Start Here</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">Injuries <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav-dropdown-menu nav-menu-injuries">
+            <div class="nav-menu-group">
+              <span class="nav-menu-heading">Auto Injuries</span>
+              <a href="car-accident-chiropractor-san-jose/">Car Accident</a>
+              <a href="whiplash-treatment-san-jose/">Whiplash</a>
+            </div>
+            <div class="nav-menu-group">
+              <span class="nav-menu-heading">Pain &amp; Mobility</span>
+              <a href="neck-pain-treatment-san-jose/">Neck Pain</a>
+              <a href="lower-back-pain-treatment-san-jose/">Back Pain</a>
+              <a href="sciatica-treatment-san-jose/">Sciatica</a>
+              <a href="sports-injury-chiropractor-san-jose/">Sports Injuries</a>
+            </div>
+          </div>
+        </li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-          <ul class="nav-dropdown-menu" role="list">
-            <li><a href="personal-injury-chiropractor-san-jose/">Personal Injury</a></li>
-            <li><a href="car-accident-chiropractor-san-jose/">Car Accident</a></li>
-            <li><a href="whiplash-treatment-san-jose/">Whiplash</a></li>
-            <li><a href="sports-injury-chiropractor-san-jose/">Sports Injuries</a></li>
-            <li><a href="lower-back-pain-treatment-san-jose/">Lower Back Pain</a></li>
-            <li><a href="neck-pain-treatment-san-jose/">Neck Pain</a></li>
-            <li><a href="sciatica-treatment-san-jose/">Sciatica</a></li>
-            <li><a href="posture-correction-san-jose/">Posture Correction</a></li>
-            <li><a href="soft-tissue-therapy-san-jose/">Soft Tissue Therapy</a></li>
-            <li><a href="active-release-technique-san-jose/">Active Release Technique</a></li>
-            <li><a href="graston-technique-san-jose/">Graston Technique</a></li>
-            <li><a href="ergonomics-san-jose/">Ergonomics &amp; Injury Prevention</a></li>
-          </ul>
+          <div class="nav-dropdown-menu nav-menu-services">
+            <div class="nav-menu-group">
+              <span class="nav-menu-heading">Treatment</span>
+              <a href="soft-tissue-therapy-san-jose/">Soft Tissue Therapy</a>
+              <a href="active-release-technique-san-jose/">Active Release</a>
+              <a href="graston-technique-san-jose/">Graston</a>
+            </div>
+            <div class="nav-menu-group">
+              <span class="nav-menu-heading">Movement &amp; Prevention</span>
+              <a href="posture-correction-san-jose/">Posture Correction</a>
+              <a href="ergonomics-san-jose/">Ergonomics</a>
+            </div>
+          </div>
         </li>
         <li><a href="#about">About</a></li>
-        <li><a href="#gym">Gym</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -370,7 +384,7 @@
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.32 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 7.32 7.32l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 18z"/></svg>
         <span>(408) 532-1139</span>
       </a>
-      <a href="#contact" class="btn btn-accent">Request Appointment</a>
+      <a href="#contact" class="btn btn-accent">Book Appointment</a>
     </div>
 
     <button
@@ -391,21 +405,21 @@
     aria-label="Mobile navigation"
     aria-hidden="true">
     <ul role="list">
-      <li><a href="#care-paths">Start Here</a></li>
-      <li><a href="personal-injury-chiropractor-san-jose/">Personal Injury Page</a></li>
+      <li class="mobile-nav-heading">Injuries</li>
       <li><a href="car-accident-chiropractor-san-jose/">Car Accident</a></li>
       <li><a href="whiplash-treatment-san-jose/">Whiplash</a></li>
       <li><a href="sports-injury-chiropractor-san-jose/">Sports Injuries</a></li>
-      <li><a href="lower-back-pain-treatment-san-jose/">Lower Back Pain</a></li>
+      <li><a href="lower-back-pain-treatment-san-jose/">Back Pain</a></li>
       <li><a href="neck-pain-treatment-san-jose/">Neck Pain</a></li>
       <li><a href="sciatica-treatment-san-jose/">Sciatica</a></li>
+      <li class="mobile-nav-heading">Services</li>
       <li><a href="posture-correction-san-jose/">Posture Correction</a></li>
       <li><a href="soft-tissue-therapy-san-jose/">Soft Tissue Therapy</a></li>
-      <li><a href="active-release-technique-san-jose/">Active Release Technique</a></li>
-      <li><a href="graston-technique-san-jose/">Graston Technique</a></li>
-      <li><a href="ergonomics-san-jose/">Ergonomics &amp; Injury Prevention</a></li>
+      <li><a href="active-release-technique-san-jose/">Active Release</a></li>
+      <li><a href="graston-technique-san-jose/">Graston</a></li>
+      <li><a href="ergonomics-san-jose/">Ergonomics</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#gym">Gym</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#location">Location</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -484,52 +498,20 @@
     </div>
   </section>
 
-  <section id="quick-proof" aria-label="Patient feedback and credentials">
-    <div class="container quick-proof-grid">
-      <blockquote>“Super informative and great at explaining what is going on—and what to do outside appointments.” <cite>— Verified patient</cite></blockquote>
-      <blockquote>“He has helped me improve my posture and with sports injuries. Especially great if you’re an athlete.” <cite>— Verified patient</cite></blockquote>
-      <div class="proof-credentials"><strong>20+ years of experience</strong><span>CCSP · ART Certified · Graston Certified</span><a href="#reviews">Read patient reviews →</a></div>
-    </div>
-  </section>
 
   <section id="symptom-selector" aria-labelledby="symptom-heading">
     <div class="container">
-      <div class="section-label">Find Your Starting Point</div>
-      <h2 id="symptom-heading">What’s bothering you?</h2>
-      <p class="section-subhead">Choose the concern that sounds most like yours to explore the most relevant care information.</p>
+      <div class="section-label">Start Here</div>
+      <h2 id="symptom-heading">What brings you in?</h2>
+      <p class="section-subhead">Choose the path that best matches what you need today.</p>
       <div class="symptom-grid">
-        <a href="neck-pain-treatment-san-jose/"><span aria-hidden="true">01</span><strong>Neck Pain</strong><small>Stiffness, limited motion, headaches, or discomfort from desk work</small></a>
-        <a href="lower-back-pain-treatment-san-jose/"><span aria-hidden="true">02</span><strong>Back Pain</strong><small>Recurring aches, lifting-related pain, or difficulty sitting and moving</small></a>
-        <a href="#conditions"><span aria-hidden="true">03</span><strong>Shoulder or Hip Pain</strong><small>Mobility restrictions, discomfort with exercise, or everyday movement limits</small></a>
-        <a href="sports-injury-chiropractor-san-jose/"><span aria-hidden="true">04</span><strong>Sports Injury</strong><small>Return to training with movement assessment and progressive rehabilitation</small></a>
-        <a href="ergonomics-san-jose/"><span aria-hidden="true">05</span><strong>Desk &amp; Posture Pain</strong><small>Neck, shoulder, wrist, hip, or back symptoms linked to long workdays</small></a>
-        <a href="car-accident-chiropractor-san-jose/"><span aria-hidden="true">06</span><strong>Car Accident</strong><small>Evaluation and organized documentation for collision-related symptoms</small></a>
+        <a href="car-accident-chiropractor-san-jose/"><span aria-hidden="true">01</span><strong>Accident &amp; Injury Care</strong><small>Evaluation, treatment, and organized documentation after a collision or personal injury</small></a>
+        <a href="neck-pain-treatment-san-jose/"><span aria-hidden="true">02</span><strong>Pain &amp; Mobility</strong><small>Care for neck pain, back pain, sciatica, stiffness, and restricted movement</small></a>
+        <a href="sports-injury-chiropractor-san-jose/"><span aria-hidden="true">03</span><strong>Sports &amp; Posture</strong><small>Movement assessment, rehabilitation, and a confident return to activity</small></a>
       </div>
     </div>
   </section>
 
-  <section id="posture-patterns" aria-labelledby="posture-patterns-heading">
-    <div class="container">
-      <div class="section-label">Posture &amp; Movement Patterns</div>
-      <h2 id="posture-patterns-heading">Pelvic tilt, lower cross syndrome, upper cross syndrome &amp; tech neck</h2>
-      <p class="section-subhead">These common patterns can be associated with stiffness, muscle imbalance, limited mobility, and recurring discomfort. A proper evaluation helps determine what is actually contributing to your symptoms.</p>
-      <div class="posture-pattern-grid">
-        <article>
-          <p class="path-eyebrow">Hips, pelvis &amp; lower back</p>
-          <h3>Anterior Pelvic Tilt &amp; Lower Cross Syndrome</h3>
-          <p>This pattern may involve restricted hip flexors, increased tension through the lower back, and reduced contribution from the abdominal and gluteal muscles. Dr. Nguyen evaluates pelvic position, hip mobility, core control, and movement mechanics before recommending care.</p>
-          <a href="lower-cross-syndrome-san-jose/">Explore lower cross syndrome care →</a>
-        </article>
-        <article>
-          <p class="path-eyebrow">Neck, shoulders &amp; upper back</p>
-          <h3>Upper Cross Syndrome &amp; Tech Neck</h3>
-          <p>Long hours at a computer or phone may contribute to forward-head posture, rounded shoulders, neck stiffness, headaches, and upper-back tension. Care may combine mobility work, soft-tissue treatment, workstation guidance, and progressive strengthening.</p>
-          <div class="posture-links"><a href="upper-cross-syndrome-san-jose/">Explore upper cross syndrome →</a><a href="posture-correction-san-jose/">Explore posture correction →</a></div>
-        </article>
-      </div>
-      <p class="pattern-note">Posture varies from person to person. These labels describe movement and muscle patterns—not a diagnosis based on appearance alone.</p>
-    </div>
-  </section>
 
   <section id="approach" aria-labelledby="approach-heading">
     <div class="container">
@@ -560,97 +542,9 @@
     </div>
   </section>
 
-  <section id="movement-in-practice" aria-labelledby="movement-heading">
-    <div class="container">
-      <div class="section-label">Movement in Practice</div>
-      <h2 id="movement-heading">Assessment, rehabilitation, and community education</h2>
-      <p class="section-subhead">A closer look at how VAL Chiropractic connects hands-on care with movement, strength, and practical education.</p>
-      <div class="practice-gallery">
-        <figure class="practice-feature">
-          <img src="assets/images/instagram-rehab-side-plank.jpg" alt="Patient performing a supported side plank in the VAL Chiropractic rehabilitation gym" loading="lazy" width="1440" height="1080">
-          <figcaption><strong>Progressive rehabilitation</strong><span>Building stability and strength around each patient’s current ability.</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/images/instagram-movement-assessment.jpg" alt="Patient performing a squat during a movement assessment at VAL Chiropractic" loading="lazy" width="1440" height="1800">
-          <figcaption><strong>Movement assessment</strong><span>Looking beyond the painful area to identify patterns that may be contributing.</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/images/instagram-community-wellness.jpg" alt="Workplace wellness presentation attended by local workers in San Jose" loading="lazy" width="1440" height="1080">
-          <figcaption><strong>Community wellness</strong><span>Sharing practical movement and injury-prevention education beyond the clinic.</span></figcaption>
-        </figure>
-        <figure class="practice-quote">
-          <img src="assets/images/instagram-treatment-philosophy.jpg" alt="Dr. Nguyen's treatment philosophy highlighting chiropractic adjustments, Active Release Technique, Graston Technique, diagnosis, and experience" loading="lazy" width="1440" height="1777">
-          <figcaption><strong>Experience guides the tools</strong><span>Adjustments, ART, and Graston are selected after understanding the why and how of the problem.</span></figcaption>
-        </figure>
-      </div>
-      <p class="photo-release-note">Preview note: confirm that patient photo releases permit website marketing before publication.</p>
-    </div>
-  </section>
 
-  <section id="right-fit" aria-labelledby="right-fit-heading">
-    <div class="container right-fit-grid">
-      <div class="right-fit-intro">
-        <div class="section-label">Is This Right for Me?</div>
-        <h2 id="right-fit-heading">A practical approach for people who want to stay active</h2>
-        <p>VAL Chiropractic may be a good fit if you want more than a quick adjustment and value understanding how joints, soft tissue, movement, and strength work together.</p>
-        <a href="#contact" class="btn btn-primary">Ask About Your Situation</a>
-      </div>
-      <div class="fit-panels">
-        <article class="fit-panel fit-panel-positive">
-          <h3>This approach may fit you if:</h3>
-          <ul>
-            <li>You want a clear explanation of what may be contributing to your symptoms.</li>
-            <li>You are open to mobility or strengthening work alongside hands-on care.</li>
-            <li>You want to return to sports, work, training, or normal daily activity.</li>
-            <li>You prefer an individualized plan rather than the same routine every visit.</li>
-          </ul>
-        </article>
-        <article class="fit-panel fit-panel-referral">
-          <h3>When another provider may be appropriate</h3>
-          <p>If your evaluation suggests imaging, medication management, emergency care, or specialist treatment is needed, Dr. Nguyen can explain the findings and recommend the appropriate next step. Care begins only when it is suitable for your situation.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section id="care-paths" aria-labelledby="care-paths-heading">
-    <div class="container">
-      <div class="section-label">Choose Your Path</div>
-      <h2 id="care-paths-heading">Care built around how you live</h2>
-      <div class="care-path-grid">
-        <article><p class="path-eyebrow">Active adults &amp; athletes</p><h3>Sports &amp; Performance</h3><p>Address pain, mobility limits, and movement patterns so you can return to training and the activities you enjoy.</p><a href="sports-injury-chiropractor-san-jose/">Explore sports injury care →</a></article>
-        <article><p class="path-eyebrow">Desk &amp; posture patients</p><h3>Neck, Back &amp; Posture</h3><p>Practical care for stiffness, recurring discomfort, and the demands of long hours at a desk.</p><a href="ergonomics-san-jose/">Explore desk and posture care →</a></article>
-        <article><p class="path-eyebrow">After a collision</p><h3>Car Accident Recovery</h3><p>A distinct care path for whiplash and collision-related injuries, with organized clinical documentation.</p><a href="car-accident-chiropractor-san-jose/">Explore accident care →</a></article>
-      </div>
-    </div>
-  </section>
 
-  <section id="quick-answers" aria-labelledby="quick-answers-heading">
-    <div class="container">
-      <div class="section-label">Quick Answers</div>
-      <h2 id="quick-answers-heading">What patients often want to know</h2>
-      <p class="section-subhead">Clear answers about VAL Chiropractic's approach, services, and San Jose location.</p>
-      <div class="quick-answer-grid">
-        <article>
-          <h3>What makes VAL Chiropractic different?</h3>
-          <p>Care can combine chiropractic treatment, soft-tissue therapy, movement assessment, mobility work, and corrective strengthening. The goal is to address contributing factors—not only symptoms—by restoring mobility first and then building strength.</p>
-        </article>
-        <article>
-          <h3>Do you treat sports and exercise injuries?</h3>
-          <p>Yes. Dr. Lam Nguyen evaluates many sports and exercise-related conditions involving the back, neck, shoulder, hip, knee, and ankle, then builds an individualized plan around the findings and your activity goals.</p>
-        </article>
-        <article>
-          <h3>Do you offer ART and Graston Technique?</h3>
-          <p>Yes. Dr. Nguyen is certified in Active Release Technique (ART) and the Graston Technique. These soft-tissue methods may be included when appropriate for your condition and care plan.</p>
-        </article>
-        <article>
-          <h3>Where are the offices?</h3>
-          <p>VAL Chiropractic has offices on S White Road and in Willow Glen at 2099 Lincoln Avenue, Suite 101. Call to schedule at the location that works for you.</p>
-          <a href="#location">See location and hours →</a>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================================
        FREE ACCIDENT CONSULTATION
@@ -677,148 +571,6 @@
   <!-- ==========================================================
        CONDITIONS WE TREAT — ACCORDION
   ========================================================== -->
-  <section id="conditions" aria-labelledby="conditions-heading">
-    <div class="container">
-
-      <div class="section-label">What We Treat</div>
-      <h2 id="conditions-heading">Conditions We Treat</h2>
-      <p class="section-subhead">
-        From accident injuries to everyday aches, Dr. Nguyen builds treatment plans around the root cause of your pain — not just the symptoms.
-      </p>
-
-      <!-- Using native <details>/<summary> — no JS required for open/close.
-           JS at bottom adds "one-open-at-a-time" enhancement. -->
-      <div class="accordion" role="list">
-
-        <!-- 1 ─ Personal Injury & Auto Accident Recovery -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l2-5h14l2 5"/><rect x="1" y="9" width="22" height="8" rx="2"/><circle cx="6.5" cy="17" r="2"/><circle cx="17.5" cy="17" r="2"/></svg>
-            </span>
-            <span class="accordion-title">Personal Injury &amp; Auto Accident Recovery</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Personal Injury &amp; Auto Accident Chiropractic Care</h3>
-            <p>Car accidents cause whiplash, spinal misalignment, and soft-tissue damage that can surface hours or days after the collision. Left untreated, these injuries frequently become chronic, painful conditions that affect your daily life for months or years.</p>
-            <p>Chiropractic adjustments restore proper spinal alignment, reduce inflammation, and accelerate natural healing — often avoiding the need for surgery or long-term medication. Dr. Nguyen builds individualized recovery plans and provides the thorough documentation your attorney needs for your personal injury claim, all with no upfront cost on lien.</p>
-          </div>
-        </details>
-
-        <!-- 2 ─ Low Back Injury / Lower Back Pain -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2c-2.5 0-4 2-4 5s2 7 4 10c2-3 4-7 4-10s-1.5-5-4-5z"/><path d="M8 18c-2 1-3 2.5-3 4h14c0-1.5-1-3-3-4"/></svg>
-            </span>
-            <span class="accordion-title">Low Back Injury / Lower Back Pain</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Lower Back Pain Treatment in San Jose</h3>
-            <p>Lower back pain is one of the most common reasons people seek chiropractic care — it can range from a dull, persistent ache that slows your workday to sharp, shooting pain that makes sitting or standing unbearable. Common causes include disc herniation, muscle strain from lifting, poor posture, and spinal misalignment from an old injury or accident.</p>
-            <p>Dr. Nguyen uses targeted spinal adjustments, soft-tissue therapy, and corrective exercises to reduce pain, restore mobility, and help you stay active for the long term. Many patients feel significant relief within just a few visits.</p>
-          </div>
-        </details>
-
-        <!-- 3 ─ Neck Pain -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v4m-3 2h6"/><path d="M9 14v6m6-6v6"/></svg>
-            </span>
-            <span class="accordion-title">Neck Pain</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Neck Pain &amp; Cervical Spine Treatment</h3>
-            <p>Whether it stems from hours at a computer, sleeping at an odd angle, or a whiplash injury from a car accident, neck pain can restrict your range of motion and radiate into your shoulders, arms, and head. Stiffness, tension headaches, and tingling in the hands are all common signs that the cervical spine needs attention.</p>
-            <p>Chiropractic adjustments to the cervical spine relieve nerve compression, ease muscle tension, and restore the natural curve of your neck. Dr. Nguyen also addresses contributing factors like forward head posture — a frequent hidden culprit in recurring neck pain — to keep the problem from coming back.</p>
-          </div>
-        </details>
-
-        <!-- 4 ─ Lower Cross Syndrome -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg>
-            </span>
-            <span class="accordion-title">Lower Cross Syndrome</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Lower Cross Syndrome Relief</h3>
-            <p>Lower Cross Syndrome (LCS) is a muscle imbalance pattern common in people who sit for extended periods — think desk workers, commuters, and drivers. Overactive, tight hip flexors and lower-back extensors combine with weak, inhibited glutes and core muscles to pull the pelvis forward, creating an exaggerated lumbar curve. The result is persistent lower back pain, hip tightness, and poor posture that worsens over time.</p>
-            <p>Dr. Nguyen treats Lower Cross Syndrome by addressing the full pattern: chiropractic adjustments for the spine and pelvis, targeted release of the tight muscle groups, and activation exercises for the weak ones. This approach corrects the underlying imbalance rather than simply treating the pain.</p>
-          </div>
-        </details>
-
-        <!-- 5 ─ Shoulder Injuries -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19c0-5 3-8 8-8s8 3 8 8"/><path d="M12 11V4"/><path d="M9 7l3-3 3 3"/></svg>
-            </span>
-            <span class="accordion-title">Shoulder Injuries</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Shoulder Injury &amp; Rotator Cuff Treatment</h3>
-            <p>Shoulder pain from rotator cuff strains, impingement syndrome, frozen shoulder (adhesive capsulitis), or accident-related trauma can make it painful — or impossible — to raise your arm, reach overhead, or sleep comfortably. What many patients don't realize is that shoulder injuries are often linked to dysfunction in the cervical spine and upper back, which is why treating the shoulder alone frequently falls short.</p>
-            <p>Dr. Nguyen evaluates the full kinetic chain — from the neck and thoracic spine through the shoulder joint and surrounding musculature — to identify all contributing causes and deliver comprehensive care that restores full function.</p>
-          </div>
-        </details>
-
-        <!-- 6 ─ Knee Injury -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v5m0 8v5m-4-9h8"/><circle cx="12" cy="12" r="4"/></svg>
-            </span>
-            <span class="accordion-title">Knee Injury</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Knee Injury &amp; Knee Pain Treatment</h3>
-            <p>Knee pain — whether from an accident, sports injury, patellofemoral syndrome, or gradual wear — can sideline you from activities you love. An important principle: the knee is often the victim rather than the cause. Misalignment in the hip, pelvis, or foot places uneven stress on the knee joint, and those biomechanical problems must be corrected for lasting relief.</p>
-            <p>Dr. Nguyen's approach combines soft-tissue therapy, joint mobilization, and correction of the mechanical imbalances above and below the knee. With the right conservative care plan, many patients avoid surgery and return to full activity.</p>
-          </div>
-        </details>
-
-        <!-- 7 ─ Hip Injury -->
-        <details class="accordion-item" role="listitem">
-          <summary class="accordion-header">
-            <span class="accordion-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="10" rx="5" ry="7"/><path d="M7 17c-2 1-3 3-3 5h16c0-2-1-4-3-5"/></svg>
-            </span>
-            <span class="accordion-title">Hip Injury</span>
-            <span class="accordion-chevron" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-          </summary>
-          <div class="accordion-body">
-            <h3>Hip Injury &amp; Hip Pain Treatment</h3>
-            <p>Hip pain can stem from bursitis, labral tears, sacroiliac joint dysfunction, or direct injury, and it often presents as deep groin aching, outer hip tenderness, or pain that radiates into the buttock and thigh. Because the hip connects the spine to the lower extremity, dysfunction here can trigger a cascade of problems in the back, knee, and ankle.</p>
-            <p>Chiropractic care for hip injuries addresses joint mechanics, muscle imbalances across the pelvis, and SI joint alignment to restore pain-free movement. Dr. Nguyen treats the hip in the context of the whole body — identifying and correcting the patterns that allowed the injury to develop, so you heal fully and stay that way.</p>
-          </div>
-        </details>
-
-      </div><!-- /accordion -->
-    </div>
-  </section>
 
   <!-- ==========================================================
        ABOUT DR. LAM NGUYEN
@@ -837,7 +589,10 @@
 
           <p>With over 20 years of clinical experience, Dr. Nguyen focuses on soft-tissue injuries, sports rehabilitation, and auto accident recovery. He is certified in Active Release Technique (ART) and the Graston Technique—manual therapies used as part of an individualized plan. He is also a California Qualified Medical Examiner (QME) in the workers’ compensation system.</p>
 
-          <p>Dr. Nguyen's philosophy is simple: pain is a signal, not a sentence. Whether you're a competitive athlete, a desk worker, or recovering from a car accident, his goal is to relieve your pain, help you understand why it happened, and give you the tools to keep it from returning.</p>
+          <blockquote class="philosophy-callout">
+            <strong>“Pain is a signal, not a sentence.”</strong>
+            <p>Whether you’re a competitive athlete, a desk worker, or recovering from a car accident, the goal is to relieve your pain, help you understand why it happened, and give you the tools to keep it from returning.</p>
+          </blockquote>
 
           <ul class="credentials-list" aria-label="Credentials">
             <li>
@@ -871,11 +626,8 @@
             <span class="cred-badge" style="display:inline-flex;align-items:center;gap:.5rem;background:#f0fdf4;border:1.5px solid #2d7a4f;border-radius:6px;padding:.4rem .85rem;font-size:.82rem;font-weight:600;color:#1a4731;">
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>CCSP
             </span>
-            <span class="cred-badge" style="display:inline-flex;align-items:center;gap:.5rem;background:#f0fdf4;border:1.5px solid #2d7a4f;border-radius:6px;padding:.4rem .85rem;font-size:.82rem;font-weight:600;color:#1a4731;">
-              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>ART Certified
-            </span>
-            <span class="cred-badge" style="display:inline-flex;align-items:center;gap:.5rem;background:#f0fdf4;border:1.5px solid #2d7a4f;border-radius:6px;padding:.4rem .85rem;font-size:.82rem;font-weight:600;color:#1a4731;">
-              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Graston Certified
+            <span class="graston-logo-badge">
+              <img src="assets/images/graston-technique-logo-white.png" alt="Graston Technique" loading="lazy">
             </span>
             <span class="cred-badge" style="display:inline-flex;align-items:center;gap:.5rem;background:#f0fdf4;border:1.5px solid #2d7a4f;border-radius:6px;padding:.4rem .85rem;font-size:.82rem;font-weight:600;color:#1a4731;">
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>QME — Workers’ Compensation
@@ -890,192 +642,14 @@
   <!-- ==========================================================
        HOW IT WORKS / WHAT TO EXPECT
   ========================================================== -->
-  <section id="how-it-works" aria-labelledby="hiw-heading">
-    <div class="container">
-
-      <div class="section-label">Your First Visit &amp; Beyond</div>
-      <h2 id="hiw-heading">What to Expect at VAL Chiropractic</h2>
-      <p class="section-subhead">Every step is clear, comfortable, and focused on getting you better faster.</p>
-
-      <ol class="steps-list" aria-label="Treatment process steps">
-
-        <li class="step-item">
-          <div class="step-number" aria-hidden="true">01</div>
-          <div class="step-content">
-            <h3>Free Consultation</h3>
-            <p>Tell us about your pain, how it started, and how it's affecting your day-to-day life. We'll listen carefully and honestly discuss whether chiropractic care is the right fit for your situation — no pressure, no commitment.</p>
-          </div>
-        </li>
-
-        <li class="step-item">
-          <div class="step-number" aria-hidden="true">02</div>
-          <div class="step-content">
-            <h3>Comprehensive Examination</h3>
-            <p>Dr. Nguyen performs a thorough physical, orthopedic, and neurological evaluation including postural analysis, range-of-motion testing, and orthopedic stress tests. If X-rays or advanced imaging are needed, we'll refer you to the right facility and review the results together.</p>
-          </div>
-        </li>
-
-        <li class="step-item">
-          <div class="step-number" aria-hidden="true">03</div>
-          <div class="step-content">
-            <h3>Personalized Treatment Plan</h3>
-            <p>Based on your examination findings, Dr. Nguyen builds a treatment plan designed around your specific injuries, goals, and schedule. He explains every step so you always know exactly what to expect and why each piece matters.</p>
-          </div>
-        </li>
-
-        <li class="step-item">
-          <div class="step-number" aria-hidden="true">04</div>
-          <div class="step-content">
-            <h3>Ongoing Care &amp; Recovery</h3>
-            <p>As you progress, your plan evolves with you. We track your improvements at every visit, adjust your care as needed, and teach you the stretches, exercises, and lifestyle habits that protect your results long after treatment ends.</p>
-          </div>
-        </li>
-
-      </ol>
-    </div>
-  </section>
 
   <!-- ==========================================================
        WHY CHOOSE VAL CHIROPRACTIC
   ========================================================== -->
-  <section id="why-choose" aria-labelledby="why-heading">
-    <div class="container">
-
-      <div class="section-label">Why Patients Choose Us</div>
-      <h2 id="why-heading">The VAL Chiropractic Difference</h2>
-
-      <div class="benefits-grid">
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Genuinely Personalized Care</h3>
-          <p>No two patients are the same. Every treatment plan is built around your specific condition, lifestyle, and goals — never a cookie-cutter protocol.</p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Personal Injury Specialists</h3>
-          <p>We specialize in auto accident recovery and work on lien so you have no upfront costs. Our detailed documentation supports your legal case every step of the way.</p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Convenient San Jose Location</h3>
-          <p>Centrally located on S White Road in San Jose, we're easy to reach from Evergreen, East San Jose, and the surrounding communities. Free on-site parking available.</p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Family-Friendly Practice</h3>
-          <p>We welcome patients of all ages — from children to seniors. VAL Chiropractic is a warm, family-oriented practice where everyone is treated with respect and care.</p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          </div>
-          <h3>Insurance &amp; Flexible Billing</h3>
-          <p>We accept most major health insurance, auto insurance (MedPay/PIP), and offer lien billing for personal injury cases.
-            <!-- TODO: List specific accepted insurances (e.g., Anthem, Blue Shield, Aetna) -->
-            Call us to verify your coverage.
-          </p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <h3>We Focus on the Why</h3>
-          <p>Dr. Nguyen doesn't just treat pain — he identifies why it happened. Understanding the root cause is what prevents the same injury from coming back.</p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Mobility &amp; Strengthening Focus</h3>
-          <p>Treatment goes beyond adjustments. Dr. Nguyen incorporates mobility work and targeted strengthening so your body can support itself long after care ends.</p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3>Movement &amp; Injury Prevention</h3>
-          <p>Dr. Nguyen teaches proper mechanics and movement patterns to help patients move better, train smarter, and reduce the risk of future injury.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================================
        A LOOK INSIDE OUR OFFICE
   ========================================================== -->
-  <section id="gym" aria-labelledby="office-tour-heading" style="background:var(--g-900);padding:var(--s20) 0;">
-    <div class="container">
-      <div class="section-label" style="color:var(--cream-100);opacity:.7;">San Jose, CA</div>
-      <h2 id="office-tour-heading" style="color:#fff;font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:.75rem;">A Look Inside Our Office</h2>
-      <p style="color:rgba(255,255,255,.75);max-width:660px;margin-bottom:var(--s10);font-size:1.05rem;">From clean, comfortable treatment rooms to a fully equipped rehabilitation gym — VAL Chiropractic is built to take you from pain relief all the way through to strength and injury prevention.</p>
-
-      <!-- Hallway hero image -->
-      <img src="assets/images/office-hallway-final.jpg" alt="VAL Chiropractic office hallway in San Jose leading to rehabilitation gym" loading="lazy" style="width:100%;height:360px;object-fit:cover;border-radius:12px;margin-bottom:1rem;">
-
-      <!-- Treatment rooms row -->
-      <p style="color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">Treatment Rooms</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
-        <div>
-          <img src="assets/images/treatment-room-a-final.jpg" alt="VAL Chiropractic treatment room with chiropractic table and The Great Wave artwork" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:10px;">
-          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Private treatment room with adjusting table</p>
-        </div>
-        <div>
-          <img src="assets/images/treatment-room-b-final.jpg" alt="VAL Chiropractic second treatment room with electric adjusting table and spinal anatomy charts" loading="lazy" style="width:100%;height:240px;object-fit:cover;border-radius:10px;">
-          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Electric height-adjustable table and anatomy references</p>
-        </div>
-      </div>
-
-      <!-- Gym row -->
-      <p style="color:rgba(255,255,255,.5);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">Rehabilitation Gym</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:var(--s10);">
-        <div>
-          <img src="assets/images/gym-rack-final.jpg" alt="Rogue power rack and bumper plates in VAL Chiropractic rehabilitation gym" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
-          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Rogue power rack &amp; barbells</p>
-        </div>
-        <div>
-          <img src="assets/images/gym-dumbbells-v2.jpg?v=3" alt="Full hex dumbbell rack at VAL Chiropractic rehab gym" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
-          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Full hex dumbbell set</p>
-        </div>
-        <div>
-          <img src="assets/images/gym-weights-final.jpg" alt="Barbell and weight storage at VAL Chiropractic" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:10px;">
-          <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin:.5rem 0 0;">Olympic plates &amp; loading station</p>
-        </div>
-      </div>
-
-      <!-- Three feature cards -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
-        <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1.25rem 1.5rem;">
-          <strong style="color:#fff;display:block;margin-bottom:.4rem;">Professional-Grade Equipment</strong>
-          <p style="color:rgba(255,255,255,.6);font-size:.9rem;margin:0;">Rogue power rack, barbells, bumper plates, hex dumbbells, resistance bands, and conditioning tools — the same equipment elite athletes train with.</p>
-        </div>
-        <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1.25rem 1.5rem;">
-          <strong style="color:#fff;display:block;margin-bottom:.4rem;">Supervised Rehabilitation</strong>
-          <p style="color:rgba(255,255,255,.6);font-size:.9rem;margin:0;">Dr. Nguyen prescribes and supervises your corrective exercise program on-site — not a printout you do at home alone.</p>
-        </div>
-        <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1.25rem 1.5rem;">
-          <strong style="color:#fff;display:block;margin-bottom:.4rem;">Beyond the Adjustment</strong>
-          <p style="color:rgba(255,255,255,.6);font-size:.9rem;margin:0;">Chiropractic care restores joint function. Strength and movement training keeps it there. Both happen here.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================================
        REVIEWS / TESTIMONIALS
