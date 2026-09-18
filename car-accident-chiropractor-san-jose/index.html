@@ -6,6 +6,14 @@
   <title>Car Accident Chiropractor in San Jose | VAL Chiropractic</title>
   <meta name="description" content="Free consultation for all car accident and personal injury cases at VAL Chiropractic in San Jose. Evaluation, treatment, documentation, and lien-based care available.">
   <meta name="robots" content="index, follow">
+  <!-- Google Analytics: measure ad landing-page visits and genuine contact clicks. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0J0EGZ4JV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N0J0EGZ4JV');
+  </script>
   <link rel="canonical" href="https://valchiropractic.com/car-accident-chiropractor-san-jose/">
   <meta name="geo.region" content="US-CA">
   <meta name="geo.placename" content="San Jose, California">
@@ -278,5 +286,18 @@
   <a href="../#contact" class="mobile-book-btn">Book Appointment</a>
 </div>
 <script src="../assets/js/main.js"></script>
+<script>
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]');
+    if (!link || typeof gtag !== 'function') return;
+    var href = link.getAttribute('href');
+    var eventName = href.indexOf('tel:') === 0 ? 'phone_click'
+      : href.indexOf('sms:') === 0 ? 'text_click' : 'email_click';
+    gtag('event', eventName, {
+      contact_method: eventName.replace('_click', ''),
+      link_url: href
+    });
+  });
+</script>
 </body>
 </html>
