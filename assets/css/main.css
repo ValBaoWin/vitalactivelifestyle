@@ -291,6 +291,10 @@ section[id], footer[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
   position: absolute;
   top: var(--header-h); left: 0; right: 0;
   width: 100%;
+  max-height: calc(100dvh - var(--header-h));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: var(--white);
   border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
@@ -320,8 +324,15 @@ section[id], footer[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
   transition: color var(--t-fast);
 }
 #mobile-nav li a:hover { color: var(--g-600); }
+.mobile-nav-heading {
+  border-bottom: 0 !important; padding: 1.1rem 0 .25rem;
+  color: var(--g-600); font-size: .76rem; font-weight: 800;
+  letter-spacing: .09em; text-transform: uppercase;
+}
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: var(--s3); }
 body.nav-open { overflow: hidden; }
+body.nav-open .contact-fab,
+body.nav-open .mobile-call-bar { visibility: hidden; pointer-events: none; }
 
 /* ================================================================
    HERO
@@ -656,6 +667,28 @@ body.nav-open { overflow: hidden; }
 .about-content h2 { margin-bottom: var(--s2); }
 .about-content p   { font-size: .94rem; }
 
+.philosophy-callout {
+  position: relative; overflow: hidden;
+  margin: var(--s7) 0; padding: var(--s7) var(--s8);
+  background: linear-gradient(135deg, var(--g-800), var(--g-700));
+  border-left: 5px solid var(--gold-500); border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+}
+.philosophy-callout::after {
+  content: '“'; position: absolute; right: 1rem; top: -.85rem;
+  color: rgba(255,255,255,.08); font-family: var(--serif);
+  font-size: 8rem; line-height: 1; pointer-events: none;
+}
+.philosophy-callout strong {
+  display: block; position: relative; z-index: 1;
+  color: var(--white); font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.25;
+}
+.philosophy-callout p {
+  position: relative; z-index: 1; margin: var(--s4) 0 0;
+  color: rgba(255,255,255,.82); font-size: .92rem; line-height: 1.7;
+}
+
 .credentials-list {
   list-style: none; display: flex; flex-direction: column; gap: var(--s3);
   margin-top: var(--s6); padding-top: var(--s6);
@@ -666,6 +699,12 @@ body.nav-open { overflow: hidden; }
   font-size: .9rem; color: var(--text-muted); line-height: 1.55;
 }
 .credentials-list svg { flex-shrink: 0; margin-top: .14rem; }
+.graston-logo-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 36px; padding: .35rem .75rem;
+  background: #123e31; border-radius: 6px;
+}
+.graston-logo-badge img { display: block; width: auto; height: 25px; }
 
 /* ================================================================
    HOW IT WORKS
@@ -1076,6 +1115,7 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
 
   .form-row { grid-template-columns: 1fr; }
   #contact-form { padding: var(--s6) var(--s5); }
+  .philosophy-callout { padding: var(--s6); }
 
   .footer-grid { grid-template-columns: 1fr; gap: var(--s8); }
   .footer-brand { grid-column: auto; }
@@ -1105,7 +1145,8 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
   position: absolute; top: calc(100% + 6px); left: 0;
   background: var(--white); border: 1px solid var(--border);
   border-radius: var(--r-md); box-shadow: var(--shadow-md);
-  list-style: none; min-width: 200px; padding: .5rem 0;
+  min-width: 440px; padding: 1.25rem;
+  display: grid; grid-template-columns: repeat(2, minmax(175px, 1fr)); gap: 1.5rem;
   opacity: 0; visibility: hidden; transform: translateY(-6px);
   transition: opacity var(--t-med), visibility var(--t-med), transform var(--t-med);
   z-index: 200;
@@ -1113,13 +1154,19 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
 .nav-dropdown.is-open .nav-dropdown-menu {
   opacity: 1; visibility: visible; transform: translateY(0);
 }
-.nav-dropdown-menu li a {
-  display: block; padding: .55rem 1rem;
+.nav-menu-group { display: flex; flex-direction: column; gap: .18rem; }
+.nav-menu-heading {
+  margin-bottom: .38rem; padding: 0 .5rem;
+  color: var(--g-700); font-size: .75rem; font-weight: 800;
+  letter-spacing: .07em; text-transform: uppercase;
+}
+.nav-dropdown-menu a {
+  display: block; padding: .48rem .5rem;
   font-size: .88rem; color: var(--text-muted);
   text-decoration: none;
   transition: background var(--t-fast), color var(--t-fast);
 }
-.nav-dropdown-menu li a:hover { background: var(--g-50); color: var(--g-700); }
+.nav-dropdown-menu a:hover { background: var(--g-50); color: var(--g-700); }
 
 /* ── Service page inner layout ──────────────────────────────── */
 .service-hero {
