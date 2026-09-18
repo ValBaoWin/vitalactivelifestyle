@@ -30,6 +30,15 @@
   <meta name="description" content="Move better with San Jose chiropractor Dr. Lam Nguyen. Chiropractic care, ART, Graston, movement assessment, and corrective exercise for active adults, desk workers, and injury recovery.">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="bhik195IgO2d1bYqQY0OYBwyWjSgx8cKWHWIiyPgDn0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0J0EGZ4JV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N0J0EGZ4JV');
+  </script>
   <meta name="author" content="VAL Chiropractic">
 
   <!-- Canonical ─────────────────────────────────────────────── -->
@@ -958,6 +967,12 @@
                 }
               }).then(function(res){
                 if(res.ok){
+                  if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                      method: 'appointment_form',
+                      form_id: 'contact-form'
+                    });
+                  }
                   status.textContent = 'Message sent! We\'ll be in touch shortly.';
                   status.style.display = 'block';
                   status.style.background = '#d1fae5';
@@ -971,7 +986,7 @@
                   });
                 }
               }).catch(function(err){
-                status.textContent = 'Something went wrong. Please call us at (408) 422-5672.';
+                status.textContent = 'Something went wrong. Please call us at (408) 532-1139.';
                 status.style.display = 'block';
                 status.style.background = '#fee2e2';
                 status.style.color = '#991b1b';
@@ -980,6 +995,18 @@
               });
             });
           })();
+        </script>
+
+        <script>
+          document.addEventListener('click', function(event) {
+            var link = event.target.closest('a[href^="tel:"], a[href^="sms:"]');
+            if (!link || typeof gtag !== 'function') return;
+            var isCall = link.getAttribute('href').indexOf('tel:') === 0;
+            gtag('event', isCall ? 'phone_click' : 'text_click', {
+              contact_method: isCall ? 'phone' : 'sms',
+              link_url: link.getAttribute('href')
+            });
+          });
         </script>
 
       </div><!-- /contact-grid -->
