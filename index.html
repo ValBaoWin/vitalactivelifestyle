@@ -111,19 +111,11 @@
       "postalCode": "95148",
       "addressCountry": "US"
     },
-    "location": [
-      {
-        "@type": "Place",
-        "name": "VAL Chiropractic — S White Road Office",
-        "address": {"@type":"PostalAddress","streetAddress":"3239 S White Road","addressLocality":"San Jose","addressRegion":"CA","postalCode":"95148","addressCountry":"US"}
-      },
-      {
-        "@type": "Place",
-        "name": "VAL Chiropractic — Willow Glen Office",
-        "address": {"@type":"PostalAddress","streetAddress":"2099 Lincoln Avenue, Suite 101","addressLocality":"San Jose","addressRegion":"CA","postalCode":"95125","addressCountry":"US"},
-        "hasMap": "https://maps.google.com/?q=2099+Lincoln+Ave+Suite+101,+San+Jose,+CA+95125"
-      }
-    ],
+    "location": {
+      "@type": "Place",
+      "name": "VAL Chiropractic — S White Road Office",
+      "address": {"@type":"PostalAddress","streetAddress":"3239 S White Road","addressLocality":"San Jose","addressRegion":"CA","postalCode":"95148","addressCountry":"US"}
+    },
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "37.3155386",
@@ -312,10 +304,10 @@
       },
       {
         "@type": "Question",
-        "name": "Where are VAL Chiropractic's San Jose offices?",
+        "name": "Where is VAL Chiropractic located?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "VAL Chiropractic has two San Jose locations: 3239 S White Road, San Jose, CA 95148, and a Willow Glen office at 2099 Lincoln Avenue, Suite 101, San Jose, CA 95125. Call to schedule at the appropriate location."
+          "text": "VAL Chiropractic is located at 3239 S White Road, San Jose, CA 95148. Dr. Lam Nguyen also sees patients at the separately branded Injury and Wellness Chiropractic in Willow Glen."
         }
       }
     ]
@@ -825,14 +817,15 @@
 
       <div class="second-location-card">
         <div>
-          <div class="section-label">Willow Glen Office</div>
-          <h3>2099 Lincoln Avenue, Suite 101</h3>
-          <p>San Jose, CA 95125</p>
-          <p class="location-scheduling-note">Call to confirm availability and schedule your visit at this location.</p>
+          <div class="section-label">Also available in Willow Glen</div>
+          <h3>Injury and Wellness Chiropractic</h3>
+          <p>2099 Lincoln Avenue, Suite 101<br>San Jose, CA 95125</p>
+          <p class="location-scheduling-note">Dr. Nguyen also sees patients at this separately branded Willow Glen clinic.</p>
         </div>
         <div class="second-location-actions">
           <a href="https://maps.google.com/?q=2099+Lincoln+Ave+Suite+101,+San+Jose,+CA+95125" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Get Directions</a>
-          <a href="tel:+14085321139" class="btn btn-accent">Call (408) 532-1139</a>
+          <a href="https://www.injuryandwellnesschiropractic.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Clinic Website</a>
+          <a href="tel:+14083033939" class="btn btn-accent">Call (408) 303-3939</a>
         </div>
       </div>
     </div>
@@ -1071,10 +1064,11 @@
       <address>
         3239 S White Road<br>
         San Jose, CA 95148<br><br>
-        2099 Lincoln Avenue, Suite 101<br>
-        San Jose, CA 95125
+        <strong>Also practicing at</strong><br>
+        <a href="https://www.injuryandwellnesschiropractic.com/" target="_blank" rel="noopener noreferrer">Injury and Wellness Chiropractic</a><br>
+        2099 Lincoln Avenue, Suite 101, San Jose, CA 95125
       </address>
-      <p><a href="tel:+14085321139">(408) 532-1139</a></p>
+      <p>VAL: <a href="tel:+14085321139">(408) 532-1139</a><br>Willow Glen: <a href="tel:+14083033939">(408) 303-3939</a></p>
       <p id="footer-email-link"><!-- injected by JS --></p>
       <h4 style="margin-top:1.25rem;">S White Road Hours</h4>
       <p class="footer-hours">
@@ -1082,7 +1076,7 @@
         Tue: 9:00 AM – 2:00 PM · Fri: 9:00 AM – 3:00 PM<br>
         Sat – Sun: Closed
       </p>
-      <small>Call for Willow Glen availability.</small>
+      <small>Willow Glen appointments are handled by Injury and Wellness Chiropractic.</small>
     </div>
 
     <div class="footer-col">
