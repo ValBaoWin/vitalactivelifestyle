@@ -55,7 +55,7 @@
   --t-fast: 150ms; --t-med: 260ms; --t-slow: 420ms;
 
   /* Layout */
-  --header-h: 70px;
+  --header-h: 64px;
 }
 
 /* ── Motion kill switch ─────────────────────────────────────── */
@@ -227,7 +227,7 @@ section[id], footer[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
 
 .header-inner {
   display: flex; align-items: center;
-  gap: var(--s6); height: var(--header-h);
+  gap: var(--s4); height: var(--header-h);
 }
 
 /* Logo */
@@ -250,23 +250,13 @@ section[id], footer[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
 #primary-nav ul { display: flex; align-items: center; gap: 2px; list-style: none; }
 #primary-nav a {
   font-size: .84rem; font-weight: 500; color: var(--g-800);
-  padding: .42rem .72rem; border-radius: var(--r-sm);
+  padding: .38rem .6rem; border-radius: var(--r-sm);
   transition: background var(--t-fast), color var(--t-fast);
 }
 #primary-nav a:hover { background: var(--g-100); color: var(--g-600); }
-#primary-nav .new-patient-nav {
-  color: var(--g-800); border: 1px solid var(--gold-500);
-  background: color-mix(in srgb, var(--gold-500) 10%, white);
-  font-weight: 700;
-}
-#primary-nav .new-patient-nav:hover,
-#primary-nav .new-patient-nav[aria-current="page"] {
-  color: var(--white); background: var(--g-700); border-color: var(--g-700);
-}
 
 /* Header CTAs */
-.header-ctas { display: flex; align-items: center; gap: var(--s3); flex-shrink: 0; }
-.header-call { display: none; }   /* revealed at ≥1024px */
+.header-ctas { display: flex; align-items: center; flex-shrink: 0; }
 
 /* Hamburger */
 .nav-toggle {
@@ -1057,11 +1047,8 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
    RESPONSIVE BREAKPOINTS
 ================================================================ */
 
-/* Show phone CTA in header on wide screens */
-@media (min-width: 1024px) { .header-call { display: flex; } }
-
 /* Collapse desktop nav → hamburger */
-@media (max-width: 1023px) {
+@media (max-width: 1179px) {
   #primary-nav            { display: none; }
   .nav-toggle             { display: flex; }
   .header-ctas .btn-primary,
@@ -1144,7 +1131,7 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
 .nav-dropdown-btn {
   background: none; border: none; cursor: pointer;
   font: inherit; font-size: .9rem; font-weight: 500;
-  color: var(--text-muted); padding: .44rem .75rem;
+  color: var(--text-muted); padding: .38rem .6rem;
   border-radius: var(--r-sm);
   display: flex; align-items: center; gap: .3rem;
   transition: background var(--t-fast), color var(--t-fast);
