@@ -254,6 +254,15 @@ section[id], footer[id] { scroll-margin-top: calc(var(--header-h) + .75rem); }
   transition: background var(--t-fast), color var(--t-fast);
 }
 #primary-nav a:hover { background: var(--g-100); color: var(--g-600); }
+#primary-nav .new-patient-nav {
+  color: var(--g-800); border: 1px solid var(--gold-500);
+  background: color-mix(in srgb, var(--gold-500) 10%, white);
+  font-weight: 700;
+}
+#primary-nav .new-patient-nav:hover,
+#primary-nav .new-patient-nav[aria-current="page"] {
+  color: var(--white); background: var(--g-700); border-color: var(--g-700);
+}
 
 /* Header CTAs */
 .header-ctas { display: flex; align-items: center; gap: var(--s3); flex-shrink: 0; }
