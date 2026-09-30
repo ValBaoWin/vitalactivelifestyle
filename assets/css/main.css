@@ -404,7 +404,7 @@ body.nav-open .mobile-call-bar { visibility: hidden; pointer-events: none; }
 .proof-credentials a { color: var(--g-600); font-weight: 700; font-size: .82rem; margin-top: .5rem; }
 
 #symptom-selector { background: var(--g-50); }
-.symptom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s4); }
+.symptom-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s4); }
 .symptom-grid a {
   display: grid; grid-template-columns: auto 1fr; column-gap: var(--s3);
   background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md);
@@ -475,7 +475,7 @@ body.nav-open .mobile-call-bar { visibility: hidden; pointer-events: none; }
 .fit-panel p { font-size: .87rem; }
 
 #care-paths { background: var(--g-50); padding-top: 0; }
-.care-path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s6); margin-top: var(--s8); }
+.care-path-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s6); margin-top: var(--s8); }
 .care-path-grid article {
   background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md);
   padding: var(--s8); box-shadow: var(--shadow-sm);
