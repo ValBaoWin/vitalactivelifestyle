@@ -986,7 +986,8 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
    STICKY MOBILE CALL BAR
 ================================================================ */
 .contact-fab {
-  position: fixed; right: 24px; bottom: 24px; z-index: 620;
+  position: fixed; right: 56px; bottom: 24px; z-index: 620;
+  max-width: calc(100vw - 48px);
   filter: drop-shadow(0 10px 24px rgba(14,32,23,.28));
 }
 .contact-fab summary {
@@ -1048,11 +1049,14 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
 ================================================================ */
 
 /* Collapse desktop nav → hamburger */
-@media (max-width: 1179px) {
+@media (max-width: 1279px) {
   #primary-nav            { display: none; }
   .nav-toggle             { display: flex; }
   .header-ctas .btn-primary,
   .header-ctas .btn-accent { display: none; }
+
+  .symptom-grid { grid-template-columns: 1fr 1fr; }
+  .pi-free-consult { align-items: flex-start; flex-direction: column; }
 }
 
 /* Stack about / location / contact at medium */

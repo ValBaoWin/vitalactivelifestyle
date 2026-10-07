@@ -117,7 +117,7 @@
       '<summary aria-label="Open contact options"><span class="contact-fab-dot" aria-hidden="true"></span>Connect Now</summary>' +
       '<div class="contact-fab-menu" aria-label="Contact VAL Chiropractic">' +
         '<a href="tel:+14085321139"><strong>Call</strong><span>(408) 532-1139</span></a>' +
-        '<a href="sms:+14085321139"><strong>Text</strong><span>Send a message</span></a>' +
+        '<a href="sms:+14083866670"><strong>Text</strong><span>(408) 386-6670</span></a>' +
         '<a href="mailto:' + addr + '"><strong>Email</strong><span>' + addr + '</span></a>' +
       '</div>';
     document.body.appendChild(contactFab);
