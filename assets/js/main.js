@@ -109,6 +109,38 @@
   if (ce) ce.innerHTML = mailTag;
   if (fe) fe.innerHTML = mailTag;
 
+  /* ── Sitewide contact-action analytics ──────────────────── */
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[href]');
+    if (!link || typeof window.gtag !== 'function') return;
+
+    var href = link.getAttribute('href') || '';
+    var eventName = '';
+    var method = '';
+
+    if (href.indexOf('tel:') === 0) {
+      eventName = 'phone_click';
+      method = 'phone';
+    } else if (href.indexOf('sms:') === 0) {
+      eventName = 'text_click';
+      method = 'sms';
+    } else if (href.indexOf('mailto:') === 0) {
+      eventName = 'email_click';
+      method = 'email';
+    } else if (href.indexOf('maps.google.com') !== -1 || href.indexOf('google.com/maps') !== -1) {
+      eventName = 'directions_click';
+      method = 'map';
+    }
+
+    if (eventName) {
+      window.gtag('event', eventName, {
+        contact_method: method,
+        link_url: href,
+        page_path: window.location.pathname
+      });
+    }
+  });
+
   /* ── Floating contact menu ─────────────────────────────── */
   if (!document.querySelector('.contact-fab')) {
     var contactFab = document.createElement('details');
