@@ -937,6 +937,35 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
   text-align: center; margin: 0; line-height: 1.55;
 }
 
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  color: var(--text-muted);
+  font-size: .9rem;
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.form-consent input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: .15rem;
+  flex: 0 0 auto;
+  accent-color: var(--g-700);
+}
+
+.form-note a,
+.footer-bottom a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-col strong {
+  color: inherit;
+}
+
 /* ================================================================
    FOOTER
 ================================================================ */
