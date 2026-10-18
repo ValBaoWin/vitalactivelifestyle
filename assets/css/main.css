@@ -1391,6 +1391,101 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
   .accident-visit-actions .btn { width: 100%; justify-content: center; }
 }
 
+/* ── Sports injury, movement & strength page ──────────────── */
+.sports-training { padding: var(--s16) 0; background: var(--cream-100); }
+.sports-training-grid {
+  display: grid; grid-template-columns: minmax(300px,.82fr) minmax(0,1.18fr);
+  gap: clamp(2.25rem,6vw,5.5rem); align-items: center;
+}
+.sports-gym-photo, .sports-rehab-photo {
+  margin: 0; overflow: hidden; border-radius: var(--r-lg);
+  background: var(--g-800); box-shadow: var(--shadow-lg);
+}
+.sports-gym-photo img { display: block; width: 100%; height: 610px; object-fit: cover; object-position: center; }
+.sports-gym-photo figcaption, .sports-rehab-photo figcaption {
+  padding: .8rem 1rem; color: rgba(255,255,255,.76); font-size: .76rem; line-height: 1.5;
+}
+.sports-training-copy h2, .sports-return-copy h2, .sports-section-heading h2 {
+  font-family: var(--serif); color: var(--g-800);
+  font-size: clamp(1.8rem,3.5vw,2.6rem); line-height: 1.15;
+}
+.sports-training-copy > h2 { margin: var(--s4) 0 var(--s4); }
+.sports-training-copy > p, .sports-return-copy > p {
+  color: var(--text-muted); line-height: 1.75; margin-bottom: var(--s6);
+}
+.sports-principles { display: grid; gap: var(--s3); margin-bottom: var(--s6); }
+.sports-principles > div { display: grid; grid-template-columns: 125px 1fr; gap: var(--s4); padding-bottom: var(--s3); border-bottom: 1px solid var(--border); }
+.sports-principles strong { color: var(--g-800); }
+.sports-principles span { color: var(--text-muted); font-size: .88rem; line-height: 1.55; }
+.sports-session-card {
+  padding: var(--s6); border-radius: var(--r-lg); background: var(--g-800);
+  color: var(--white); box-shadow: var(--shadow-md);
+}
+.sports-session-card > div { display: grid; grid-template-columns: 1fr auto; gap: .2rem var(--s4); align-items: end; }
+.sports-session-card > div span { color: var(--g-200); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.sports-session-card > div strong { grid-row: 1 / 3; grid-column: 2; font-family: var(--serif); font-size: 2.35rem; color: var(--white); line-height: 1; }
+.sports-session-card > div small { color: rgba(255,255,255,.65); }
+.sports-session-card p { color: rgba(255,255,255,.74); font-size: .86rem; line-height: 1.6; margin: var(--s4) 0 var(--s5); }
+.sports-session-card .btn { display: inline-flex; margin-right: var(--s4); }
+.sports-session-card > a:last-child { display: inline-block; margin-top: var(--s3); color: var(--g-200); font-size: .78rem; }
+
+.sports-audience { padding: var(--s16) 0; background: var(--white); }
+.sports-section-heading { max-width: 720px; margin: 0 auto var(--s10); text-align: center; }
+.sports-section-heading h2 { margin: var(--s4) 0; }
+.sports-section-heading > p { color: var(--text-muted); line-height: 1.7; }
+.sports-audience-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--s4); }
+.sports-audience-grid article { padding: var(--s6); border: 1px solid var(--border); border-radius: var(--r-md); background: var(--cream-100); }
+.sports-audience-grid article > span { color: var(--gold-600); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+.sports-audience-grid h3 { margin: var(--s3) 0; color: var(--g-800); }
+.sports-audience-grid p { color: var(--text-muted); font-size: .86rem; line-height: 1.65; }
+.sports-audience-grid a { display: inline-block; margin-top: var(--s3); color: var(--g-700); font-size: .8rem; font-weight: 700; }
+
+.sports-return { padding: var(--s16) 0; background: var(--g-50); }
+.sports-return-grid { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(300px,.88fr); gap: clamp(2rem,6vw,5rem); align-items: center; }
+.sports-return-copy h2 { margin: var(--s4) 0; }
+.sports-return-copy blockquote {
+  margin: var(--s6) 0; padding: var(--s5) var(--s6); border-left: 4px solid var(--gold-500);
+  background: var(--white); color: var(--g-800); font-family: var(--serif); font-size: 1.2rem; line-height: 1.55;
+}
+.sports-injury-list { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s5); }
+.sports-injury-list span { padding: .42rem .75rem; border-radius: var(--r-pill); background: var(--g-100); color: var(--g-700); font-size: .8rem; font-weight: 650; }
+.sports-return-copy .sports-disclaimer { font-size: .76rem; color: var(--text-light); }
+.sports-rehab-photo img { display: block; width: 100%; height: 500px; object-fit: cover; object-position: center; }
+
+.sports-first-visit { padding: var(--s16) 0; background: var(--cream-100); text-align: center; }
+.sports-visit-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--s5); margin: 0 0 var(--s8); padding: 0; list-style: none; text-align: left; }
+.sports-visit-steps li { display: grid; grid-template-columns: 42px 1fr; gap: var(--s4); padding: var(--s6); border-radius: var(--r-md); background: var(--white); box-shadow: var(--shadow-sm); }
+.sports-visit-steps li > span { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--g-700); color: var(--white); font-weight: 800; }
+.sports-visit-steps strong { display: block; color: var(--g-800); margin-bottom: var(--s2); }
+.sports-visit-steps p { color: var(--text-muted); font-size: .86rem; line-height: 1.6; }
+.sports-text-link { color: var(--g-700); font-weight: 750; text-underline-offset: 3px; }
+.service-bottom-cta .service-cta-box .service-hero-btns { margin: 0; }
+.service-bottom-cta .service-cta-box .btn-outline { color: var(--white); border-color: rgba(255,255,255,.45); }
+
+@media (max-width: 900px) {
+  .sports-audience-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .sports-visit-steps { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 800px) {
+  .sports-training-grid, .sports-return-grid { grid-template-columns: 1fr; }
+  .sports-gym-photo img { height: 470px; }
+  .sports-return-copy { order: 1; }
+  .sports-rehab-photo { order: 2; }
+}
+
+@media (max-width: 560px) {
+  .sports-page .contact-fab { display: none; }
+  .sports-gym-photo img, .sports-rehab-photo img { height: 330px; }
+  .sports-principles > div { grid-template-columns: 1fr; gap: .2rem; }
+  .sports-session-card > div { grid-template-columns: 1fr; }
+  .sports-session-card > div strong { grid-row: auto; grid-column: auto; margin: var(--s2) 0; }
+  .sports-session-card .btn { width: 100%; justify-content: center; margin-right: 0; }
+  .sports-audience-grid { grid-template-columns: 1fr; }
+  .sports-visit-steps li { padding: var(--s5); }
+  .service-bottom-cta .service-hero-btns .btn { width: 100%; justify-content: center; }
+}
+
 /* ── Pricing & Insurance page ─────────────────────────────── */
 .pricing-hero { padding: clamp(4rem,8vw,7rem) 0; text-align: center; background: linear-gradient(135deg,var(--g-900),var(--g-700)); }
 .pricing-hero .section-label { color: var(--gold-100); background: rgba(224,163,58,.16); }
