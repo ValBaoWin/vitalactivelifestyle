@@ -1486,6 +1486,42 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
   .service-bottom-cta .service-hero-btns .btn { width: 100%; justify-content: center; }
 }
 
+/* ── Search discovery and clinical-review details ─────────── */
+.care-detail-links {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: .65rem 1rem; max-width: 980px; margin: var(--s6) auto 0;
+  font-size: .9rem;
+}
+.care-detail-links span { color: var(--text-muted); font-weight: 700; }
+.care-detail-links a {
+  color: var(--g-700); font-weight: 650; text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.care-detail-links a:hover { color: var(--g-900); }
+
+.medical-review-note {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem;
+  margin: 0 0 var(--s8); padding: .9rem 1rem;
+  border: 1px solid var(--cream-300); border-left: 4px solid var(--g-500);
+  border-radius: var(--r-sm); background: var(--cream-100); font-size: .88rem;
+}
+.medical-review-note strong { color: var(--g-900); }
+.medical-review-note span { color: var(--text-muted); }
+.medical-safety-note {
+  margin: var(--s8) 0; padding: var(--s6); border: 1px solid #e3c981;
+  border-radius: var(--r-md); background: #fffaf0;
+}
+.medical-safety-note h3 { margin-bottom: var(--s3); color: var(--g-900); }
+.medical-safety-note p { margin: 0; }
+.medical-sources { margin: var(--s6) 0; font-size: .9rem; color: var(--text-muted); }
+.medical-sources strong { color: var(--g-900); }
+.medical-sources a { margin-left: .25rem; }
+
+@media (max-width: 560px) {
+  .care-detail-links { justify-content: flex-start; }
+  .care-detail-links span { flex-basis: 100%; }
+}
+
 /* ── Pricing & Insurance page ─────────────────────────────── */
 .pricing-hero { padding: clamp(4rem,8vw,7rem) 0; text-align: center; background: linear-gradient(135deg,var(--g-900),var(--g-700)); }
 .pricing-hero .section-label { color: var(--gold-100); background: rgba(224,163,58,.16); }
