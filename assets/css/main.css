@@ -1092,7 +1092,7 @@ textarea { resize: vertical; min-height: 118px; line-height: 1.62; }
 
 @media (max-width: 767px) {
   .contact-fab { right: 14px; bottom: 68px; }
-  .contact-fab summary { padding: .72rem .95rem; font-size: .82rem; }
+  .contact-fab summary { padding: .72rem .95rem; font-size: .82rem; animation: none; }
   .contact-fab-menu { width: min(250px, calc(100vw - 28px)); }
   .mobile-call-bar {
     display: flex; position: fixed; bottom: 0; left: 0; right: 0;
