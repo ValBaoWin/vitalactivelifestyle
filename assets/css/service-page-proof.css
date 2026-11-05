@@ -39,6 +39,33 @@
   font-size: .72rem;
 }
 
+/* A single compact local-information strip replaces repeated biography blocks. */
+.service-local-strip {
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+.service-local-strip .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem 1.35rem;
+  padding-top: .9rem;
+  padding-bottom: .9rem;
+  color: var(--text-light);
+  font-size: .82rem;
+}
+.service-local-strip span { white-space: nowrap; }
+.service-local-strip a {
+  color: var(--g-700);
+  font-weight: 750;
+  text-underline-offset: 3px;
+}
+@media (max-width: 680px) {
+  .service-local-strip .container { gap: .45rem .8rem; }
+  .service-local-strip span { white-space: normal; text-align: center; }
+}
+
 /* The car-accident first-visit section no longer uses a photo column. */
 .accident-first-visit-grid {
   display: block;
