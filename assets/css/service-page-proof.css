@@ -1,0 +1,47 @@
+/* Compact patient-proof sections used on high-impression service pages. */
+.service-proof { padding: var(--s10) 0; background: var(--cream-100); }
+.service-proof-card {
+  max-width: 860px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.service-proof-copy { padding: clamp(1.6rem,4vw,3rem); }
+.service-proof-copy .section-label { margin-bottom: var(--s4); }
+.service-proof-stars { color: #f59e0b; letter-spacing: .08em; margin-bottom: var(--s4); }
+.service-proof-copy blockquote {
+  margin: 0 0 var(--s5);
+  color: var(--g-800);
+  font-family: var(--serif);
+  font-size: clamp(1.12rem,2.2vw,1.38rem);
+  line-height: 1.62;
+}
+.service-proof-copy footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem .8rem;
+  margin-bottom: var(--s4);
+}
+.service-proof-copy footer strong { color: var(--text); }
+.service-proof-copy footer span { color: var(--text-light); }
+.service-proof-copy > a {
+  color: var(--g-700);
+  font-size: .84rem;
+  font-weight: 750;
+  text-underline-offset: 3px;
+}
+.service-proof-note {
+  margin: calc(-1 * var(--s2)) 0 var(--s4);
+  color: var(--text-light);
+  font-size: .72rem;
+}
+
+/* The car-accident first-visit section no longer uses a photo column. */
+.accident-first-visit-grid {
+  display: block;
+  max-width: 820px;
+  margin: 0 auto;
+}
